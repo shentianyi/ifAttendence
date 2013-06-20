@@ -38,7 +38,6 @@ module Attendance
       @members = []
       roleCap = Role.where( :nr=>"captain", :name=>"captain" ).first
       if request.get?
-
         if !params[:cap].nil? && @currentUser.nr=='admin'
           if cap=Staff.find_by_id(params[:cap])
             @capNr=cap.nr
@@ -47,7 +46,7 @@ module Attendance
             raise(RuntimeError, "组长不存在。")
           end
         else
-          @capNr=@currentUser.nr
+             @capNr=session[:create_mem_cap_nr] || @currentUser.nr
         end
         raise(RuntimeError, "不是组长。") unless cap = roleCap.staffs.where( :nr=>@capNr).first
       else
