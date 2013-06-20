@@ -61,3 +61,7 @@ cn:
     existStaffLogOther: "此员工已在其他地点登记，登记点：%{place}"
     wrService: "数据中心服务异常。"
       
+  will_paginate:
+    previous_label: "<"
+    next_label: ">"
+    page_gap: "......."

@@ -60,3 +60,9 @@ en:
     existStaffLog: "The staff has already logged in, at workunit: %{place}"
     existStaffLogOther: "The staff has already logged in, at workunit: %{place}"
     wrService: "Data Center has something wrong."
+    
+      
+  will_paginate:
+    previous_label: "<"
+    next_label: ">"
+    page_gap: "......."
