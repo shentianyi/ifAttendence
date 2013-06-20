@@ -39,7 +39,7 @@
                     <% end %>
                </table>
                <p>
-                    <%= will_paginate @members,{:previous_label=>'<',:next_label=>'>'}%>
+                    <%= will_paginate @members,{:previous_label=>'<',:next_label=>'>',:page_gap=>'......'}%>
                </p>
           </div>
 
