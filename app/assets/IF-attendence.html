@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/ifattendence.css" rel="stylesheet" type="text/css">
+		<link href="css/general.css" rel="stylesheet" type="text/css">
+		<link href="css/redmond/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css">
+		<title>IFAttendence</title>
+	</head>
+	<body>
+		<!-- 最上面的头 -->
+		<div class="navbar">
+			<div class="container">
+				<div class="wrap-small">
+					<img src="img/headicon.png">
+					<label class="font-gray display-inline head-explain">Attendence</label>
+					<ul class="nav pull-right attendence-nav">
+						<li>
+							<a class="choosen-ope">Operation</a>
+						</li>
+												<li>
+							<a href="attendence-inquery.html" class="choosen-inq">Inquery</a>
+						</li>
+						<li>
+							<a href="attendence-seetings.html" class="choosen-set">Settings</a>
+						</li>
+						<li class="divider-vertical"></li>
+						<li>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"> Wayne.Wang <b class="caret"></b> </a>
+							<ul class="dropdown-menu user-account">
+								<li><a href="#">Edit</a></li>
+								 <li class="divider"></li>
+								<li ><a href="#" class="user-logout">Logout</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 中间的herounit -->
+		<div class="hero-unit hero-attendence">
+			<div class="wrap-small">
+
+				<!-- 左边部分 -->
+				<div class="wrap-small-left">
+					<!-- 扫描生产线号 -->
+					<div class="entityGroup">
+						<p class="font-gray " id="worku-title-show">
+							Choose a workingunit
+						</p>
+						<div class=" state-btn-group" >
+							<button type="button" class="btn ">
+								work
+							</button>
+							<button type="button" class="btn " >
+								pause
+							</button>
+							<button type="button" class="btn ">
+								stop
+							</button>
+							<button type="button" class="btn ">
+								abnormal
+							</button>
+						</div>
+						<label class="font15 text-success state-change-info hide">State Changed</label>
+					</div>
+
+					<!-- 扫描员工号 -->
+					<div class="staffGroup">
+						<label class="font-gray font15 display-inline " > Staff</label>
+                        <Label id="log"  onclick="logbtn_press()">Login</Label>
+						<input type="text" id="staffID"  onkeypress="regiter_attendance(event);">
+											     <div class="btn-group worku-btngroup">
+						<a class="btn btn-mini dropdown-toggle wu-dropdown" data-toggle="dropdown" href="#"> <span class="caret"></span> </a>
+						<ul class="dropdown-menu" id="ul">
+							<li>
+								<a href="#staff" role="button" data-toggle="modal"> Group1</a>
+							</li>
+							<li>
+								<a href="#staff" role="button" data-toggle="modal"> Group2</a>
+							</li>
+							<li>
+								<a href="#staff" role="button" data-toggle="modal">Group3</a>
+							</li>
+
+						</ul>
+					</div>
+                  
+						
+						</br>
+						<span id="result" class="text-success"> </span>
+						<!-- <div class="toggle" id="logToggle" onclick="logbtn_press();">
+						<label class="toggle-radio" for="toggleOption2">Login</label>
+						<input id="toggleOption1" type="radio" checked="checked" value="option1" name="toggleOptions">
+						<label class="toggle-radio" for="toggleOption1">&nbsp;Logout</label>
+						<input id="toggleOption2" type="radio" value="option2" name="toggleOptions">
+						</div> -->
+
+					</div>
+				</div>
+
+				<!-- 右边部分 -->
+				<div class="wrap-small-right">
+					<!-- 右边的标题 -->
+					<label class="font-gray display-inline font22 worku-head" >WorkingUnit List</label>
+					<!-- 快速定位working unit -->
+
+
+					<!-- <input  type="text" id="entityID" onkeypress="log_attendance(event);"> -->
+
+					<!-- 右边的会折叠的部分 -->
+					<div id="accordion" class="accordion">
+						<!-- 这下面留 -->
+						<h3 >
+						<p class="display-inline">
+							Working Unit1
+						</p>
+						<div class="pull-right staff-count ">
+							<label class="display-inline ">Staff:</label>
+							<label class="display-inline">1</label>
+						</div>
+						<div class="pull-right">
+							<label class="display-inline text-success">working</label>
+						</div>
+						</h3>
+						<ul>
+							<li>tracy：001</li>
+							<li>tim：002</li>
+							<li>james：003</li>
+							<li><a class="btn btn-small btn-warning pull-right allLogout">all logout</a></li>
+						</ul>
+						<!-- 这上面留 -->
+						<h3>
+						<p class="display-inline">
+							Working Unit2
+						</p>
+						<div class="pull-right staff-count">
+							<label class="display-inline">Staff:</label>
+							<label class="display-inline">21</label>
+						</div>
+						<div class="pull-right">
+							<label class="display-inline text-success">working</label>
+						</div>
+						</h3>
+						<ul>
+							<li>tracy：001</li>
+							<li>tim：002</li>
+							<li>james：003</li>
+								<li><a class="btn btn-small btn-warning pull-right allLogout">all logout</a></li>
+						</ul>
+
+						<h3>
+						<p class="display-inline">
+							Working Unit3
+						</p>
+						<div class="pull-right staff-count ">
+							<label class="display-inline">Staff:</label>
+							<label class="display-inline">221</label>
+						</div>
+						<div class="pull-right">
+							<label class="display-inline text-info">pause</label>
+						</div></h3>
+						<ul>
+							<li>tracy：001</li>
+							<li>tim：002</li>
+							<li>james：003</li>
+								<li><a class="btn btn-small btn-warning pull-right allLogout">all logout</a></li>
+						</ul>
+						
+						<h3>
+						<p class="display-inline">
+							Working Unit4
+						</p>
+						<div class="pull-right staff-count ">
+							<label class="display-inline">Staff:</label>
+							<label class="display-inline">221</label>
+						</div>
+						<div class="pull-right">
+							<label class="display-inline text-info">pause</label>
+						</div></h3>
+						<ul>
+							<li>tracy：001</li>
+							<li>tim：002</li>
+							<li>james：003</li>
+								<li><a class="btn btn-small btn-warning pull-right allLogout">all logout</a></li>
+						</ul>
+
+						<h3>
+						<p class="display-inline">
+							Working Unit5
+						</p>
+						<div class="pull-right staff-count ">
+							<label class="display-inline">Staff:</label>
+							<label class="display-inline">221</label>
+						</div>
+						<div class="pull-right">
+							<label class="display-inline text-info">pause</label>
+						</div></h3>
+						<ul>
+							<li>tracy：001</li>
+							<li>tim：002</li>
+							<li>james：003</li>
+								<li><a class="btn btn-small btn-warning pull-right allLogout">all logout</a></li>
+						</ul>
+
+
+					</div>
+
+				</div>
+				<!-- 上面的都是右边部分的 -->
+
+			</div>
+		</div>
+
+
+          <!-- 下面是跳出来选人的 -->					
+					<div id="staff" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true">
+						<div class="modal-header">
+							<a type="button" class="close" data-dismiss="modal" aria-hidden="true" ><i class="icon-remove"></i></a>
+							<h3 id="myModalLabel">Choose Staff</h3>
+						</div>
+
+						<div class="modal-body">
+						 <div class="staff-card staff-choosen">
+                                	<label>Michel.Chen</label>
+                                	<label>12443254</label>
+                                </div>
+                                
+                                <div class="staff-card staff-choosen">
+                                	<label>Macgrady.Tracy</label>
+                                	<label>12936527</label>                                	
+                                </div>
+                                
+                                <div class="staff-card staff-choosen">
+                                	<label>Cold.Wrong</label>
+                                	<label>84633209</label> 	
+                                </div>	
+							
+						
+						</div>
+
+						<div class="modal-footer">
+							<button class="btn" data-dismiss="modal" aria-hidden="true">
+								Undo
+							</button>
+							<button class="btn btn-primary" data-dismiss="modal"  >
+								Done
+							</button>
+						</div>
+					</div>
+					<!-- 上面是跳出来选人的 -->
+
+
+
+
+		<!-- 填表 -->
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/ifAttendence.js"></script>
+
+	</body>
+</html>

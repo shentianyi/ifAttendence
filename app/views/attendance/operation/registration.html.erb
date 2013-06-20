@@ -1,0 +1,102 @@
+<link href="/assets/ifattendence.css" rel="stylesheet" type="text/css">
+<script src="/assets/ifAttendence.js"></script>
+
+<!-- 中间的herounit -->
+<div class="hero-unit hero-attendence">
+	<div class="wrap-small">
+
+		<!-- 左边部分 -->
+		<div class="wrap-small-left">
+			<div class="entityGroup">
+				<p class="font-gray " id="worku-title-show">
+					<%= t(".chooseWorkunit")%>
+				</p>
+				<div class="state-btn-group" >
+					<% @unitStates.each do |stat| %>
+						<button type="button" class="btn " onclick="state_control(this);">
+							<%= stat.state %>
+						</button>
+					<% end %>
+				</div>
+				<label class="font15 text-success state-change-info hide"></label>
+			</div>
+
+			<div class="staffGroup">
+				<label class="font-gray font15 display-inline " ><%= t(".execute")%></label>
+				<Label id="log"  onclick="logbtn_press()"  state="in" labin="<%= t(".labIn")%>" labout="<%= t(".labOut")%>"><%= t(".labIn")%></Label>
+				<input type="text" id="staffID"  placeholder="<%= t(".placeholder") %>"  onkeypress="register_attendance(event);">
+
+				<div class="btn-group worku-btngroup">
+						<a class="btn btn-mini dropdown-toggle wu-dropdown" data-toggle="dropdown" href="#"> <span class="caret"></span> </a>
+						<ul class="dropdown-menu" id="ul">
+							<% @mySquads.each do |squ| %>
+								<li>
+									<a href="#staff" role="button" data-toggle="modal" squadnr="<%= squ.nr %>" onclick="squad_members(this);"><%= squ.name %></a>
+								</li>
+							<% end %>
+						</ul>
+				</div>
+                
+
+
+				</br>
+				<span id="result" class="text-success"> </span>
+			</div>
+		</div>
+
+		<!-- 右边部分 -->
+		<div class="wrap-small-right">
+			<!-- 右边的标题 -->
+			<label class="font-gray display-inline font22 worku-head"><%= t(".labMyWorkunit")%></label>
+
+			<!-- 右边的会折叠的部分 -->
+			<div id="accordion" class="accordion">
+				<% @workunits.each do |unit| %>
+					<h3 unitnr="<%= unit.nr %>" >
+					<p class="display-inline"><%= unit.nr %></p>
+					<div class="pull-right staff-count ">
+						<label class="display-inline "><%= t(".labStaffNum")%></label>
+						<label class="display-inline" staffnum ><%= unit.staffs.count %></label>
+					</div>
+					<div class="pull-right">
+						<label class="display-inline text-success" unitstate ><%= unit.state %></label>
+					</div>
+					</h3>
+					<ul unitnr="<%= unit.nr %>" >
+						<% unit.staffs.each do |staff| %>
+							<li staffnr="<%= staff.nr %>" ><%= staff.nr %> : <%= staff.name %></li>
+						<% end %>
+						<li><a class="btn btn-small btn-warning pull-right allLogout"><%= t(".butAllout")%></a></li>
+					</ul>
+				<% end %>
+			</div>
+
+		</div>
+		<!-- 上面的都是右边部分的 -->
+
+	</div>
+</div>
+                <!-- 下面是跳出来选人的 -->					
+				<div id="staff" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModelLabel" aria-hidden="true">
+					<div class="modal-header">
+						<a type="button" class="close" data-dismiss="modal" aria-hidden="true" ><i class="icon-remove"></i></a>
+						<h3 id="myModalLabel"><%= t(".labGroup")%></h3>
+					</div>
+
+					<div class="modal-body">
+					</div>
+
+					<div class="modal-footer">
+						<button class="btn" data-dismiss="modal" aria-hidden="true">
+							<%= t(".cancel")%>
+						</button>
+						<button class="btn btn-primary" data-dismiss="modal" onclick="batch_login();" >
+							<%= t(".confirm")%>
+						</button>
+					</div>
+				</div>
+				
+<div id="sortsoferrors" style="display: none">
+	<p alertInputStaff><%= t(".alertInputStaff")%></p>
+	<p alertAllout><%= t(".alertAllout")%></p>
+</div>

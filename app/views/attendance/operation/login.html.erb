@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <title>IF--Attendance</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+	<script>
+		$(document).ready(function(){
+			document.getElementById('staffNr').focus();
+			$('.alert').draggable();
+		});							
+	</script>	
+</head>
+<body>
+		
+		<div class="navbar">
+			<div class="container">
+				<div class="navbar-inner">
+				<div class="wrap-small">
+					<img src="/assets/headicon.png">
+					<label class="font-gray display-inline head-explain"><%= t("layouts.attendance.headline")%></label>
+				</div>	
+				</div>
+			</div>
+		</div>   
+		
+		<div class="wrap-small">
+			<%= form_tag  do %>
+				<label class=" font-gray font15" style="margin:100px 0px 10px 290px"><%= t('.labLogin') %></label>
+				<%= text_field_tag :staffNr, nil, :style=>"margin-left:290px;" %>
+<!-- 				<%= password_field_tag :password %> -->
+<!-- 				<%= submit_tag "登录" %> -->
+			<% end %>
+			<div class="log-error font15 text-warning">
+				<p><%= flash[:notice] %></p>
+			</div>
+		</div>
+		
+
+</body>
+</html>

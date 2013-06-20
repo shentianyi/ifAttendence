@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="UTF-8">
+          <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+          <link href="css/ifattendence.css" rel="stylesheet" type="text/css">
+          <link href="css/general.css" rel="stylesheet" type="text/css">
+          <link href="css/redmond/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css">
+          <title>IFAttendence Group</title>
+          <script src="js/jquery-1.9.1.min.js"></script>
+          <script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+          <script src="js/ifAttendence.js"></script>
+          <style type="text/css">
+											#accordion li:hover {
+												cursor:pointer;
+												background-color:#1297CF;
+											}
+          </style>
+          <script type="text/javascript">
+               $(function() {
+                    $("#accordion").accordion({
+                         collapsible : true
+                    });
+                    // init draggable element
+                    // due to every created draggable  element have the same attributes,
+                    // make it a function
+                    initDraggable("#accordion li");
+
+                    // init accept element
+                    // using customer attr
+                    $("h3[staff-drag-group='draggable']").droppable({
+                         accept : ":not(.ui-sortable-helper)",
+                         drop : function(event, ui) {
+                              // if same group?
+                              if($(this).attr("staff-group-id") != ui.draggable.parents(".group-container").prev().attr("staff-group-id")) {
+                                   // create new element
+                                   var li = $("<li/>");
+                                   // make it draggable
+                                   initDraggable(li);
+                                   // append the elements
+                                   $(this).next().find("ul").append(li.text(ui.draggable.text()));
+                                   // remove old element
+                                   ui.draggable.remove();
+                              }
+                         }
+                    })
+               });
+               function initDraggable(ele) {
+                    $(ele).draggable({
+                         appendTo : "body",
+                         helper : "clone",
+                         stop : function(event, ui) {
+                              $("#msg").show(1000,function (argument) {
+                                $(this).hide(1500);
+                              });
+                         }
+                    });
+               }
+          </script>
+     </head>
+     <body>
+          <div style=" display: none; font-size:20px; margin:20px; background-color:#1297CF;height:80px;" id="msg">
+            <br /> OH！！！ 太神奇了！！！ 
+          </div>
+          <div id="accordion">
+               <h3 class="staff-group-id" staff-drag-group="draggable" staff-group-id="group1">Group 1</h3>
+               <div class="group-container">
+                    <ul>
+                         <li>
+                              List item 1
+                         </li>
+                         <li>
+                              List item 2
+                         </li>
+                         <li>
+                              List item 3
+                         </li>
+                    </ul>
+               </div>
+               <h3 class="staff-group-id"  staff-drag-group="draggable"  staff-group-id="group2">Group 2</h3>
+               <div  class="group-container">
+                    <ul></ul>
+               </div>
+               <h3 class="staff-group-id"  staff-drag-group="draggable"  staff-group-id="group3">Group 3</h3>
+               <div class="group-container">
+                    <ul>
+                         <li>
+                              List item 4
+                         </li>
+                         <li>
+                              List item 5
+                         </li>
+                         <li>
+                              List item 6
+                         </li>
+                    </ul>
+               </div>
+               <h3   class="staff-group-id"  staff-drag-group="draggable" staff-group-id="group4">Group 4</h3>
+               <div class="group-container">
+                    <ul></ul>
+               </div>
+          </div>
+     </body>
+</html>

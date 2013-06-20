@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+			
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="css/attendenceInquery.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="css/general.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="css/datetimepicker.css" rel="stylsheet" type="text/css" media="screen">
+		 <title>IFAttendence Inquery</title>	
+		
+		
+	</head>
+	<body>
+		<!-- 最上面的头 -->
+		<div class="navbar">
+			<div class="container">
+				<div class="wrap-small">
+					<img src="img/headicon.png">
+					<label class="font-gray display-inline head-explain">Attendence</label>
+					<ul class="nav pull-right attendence-nav">
+						<li>
+							<a href="IF-attendence.html" class="choosen-ope">Operation</a>
+						</li>
+						<li>
+							<a href="attendence-inquery.html" class="choosen-inq">Inquery</a>
+						</li>
+						<li>
+							<a class="choosen-set">Settings</a>
+						</li>
+						<li class="divider-vertical"></li>
+						<li>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"> Wayne.Wang <b class="caret"></b> </a>
+							<ul class="dropdown-menu user-account">
+								<li>
+									<a href="#">Edit</a>
+								</li>
+								<li class="divider"></li>
+								<li >
+									<a href="#" class="user-logout">Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 中间的herounit -->
+		<div class="hero-unit font-gray hero-inquery">
+			<div class="wrap-small">
+			
+					<!-- choose working unit -->
+					<label>Working Unit</label>
+					<input type="text">
+					<a class="btn btn-mini dropdown-toggle wu-dropdown" href="#"><span class="caret"></span> </a>
+					<!-- choose staff -->
+					<label>Staff Number</label>
+					<input type="text">
+					<a class="btn btn-mini dropdown-toggle wu-dropdown" href="#"><span class="caret"></span> </a>
+					<!-- choose interval -->
+					<label>Time Interval</label>
+                    <input type="text" class="dateTime">
+					<label>-</label><input type="text" class="dateTime">
+				</div>
+	
+		</div>
+		
+		
+	
+	
+				
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js" charset="UTF-8"></script>		
+	    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>	
+		<script type="text/javascript" src="js/bootstrap.min.js" charset="UTF-8"></script>	 
+		<script type="text/javascript">
+    $('.dateTime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+        </script> 
+
+	</body>
+</html>

@@ -1,0 +1,41 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+de:
+  attendance:
+    
+    operation:
+      login:
+        labLogin: "Bitte input your ID :"
+      registration:
+        chooseWorkunit: "Bitte Choose a Workunit :"
+        alertWorkunitStateChange: "Workunit state changed"
+        execute: "machen:"
+        labIn: "eintreten"
+        labOut: "logout"
+        placeholder: "Bitte input the staff ID"
+        labMyWorkunit: "My Workunit List"
+        labStaffNum: "staff"
+        butAllout: "All Logout"
+        labGroup: "Choose staff"
+        cancel: "cancel"
+        confirm: "confirm"
+        
+    personal:
+      create_squad:
+        labGroup: "Groups"
+        labStaffNum: "staff"
+        labAdd: "add"
+        labEdit: "edit"
+        labDone: "done"
+        labDelete: "delete"
+
+
+  layouts:
+    attendance:
+      headline: "Attendance"
+      operation: "operation"
+      settings: "settings"
+      edit: "edit"
+      logout: "logout"
+      messageBox: "Warning !"

@@ -1,0 +1,66 @@
+.wrap-small{
+	width:750px;
+	margin:auto;
+}
+.font-gray{
+	color:#9d9d9d;
+}
+.head-explain {
+	position: relative;
+	top: 18px;
+	left: -21px;
+	cursor:default;
+}
+.navbar-inner{
+	border-radius:0px;
+}
+.display-inline{
+	display:inline;
+}
+.font15{
+	font-size:15px;
+}
+.font22{
+	font-size:22px;
+}
+.navbar .nav.attendence-nav{
+	margin-top:36px;
+}
+.dropdown-menu.user-account{
+	min-width:100px;
+}
+.dropdown-menu > li > a.user-logout{
+	color:#FAA732
+}
+label{
+	cursor:default;
+}
+.staff-card{
+	cursor:pointer;
+	color:#9d9d9d;
+	font-size:14px;
+	text-align:center;
+	display:inline-block;
+	width:100px;
+	height:50px;
+	border:1px solid #c2c2c2;
+	padding:3px;
+	margin-bottom:5px;
+} 
+.staff-card label{
+	cursor:pointer;
+}
+.alert{
+	position:relative;
+
+	left:25%; 
+	width:400px;	
+}
+.alert .close{
+	position:relative;
+	top:-23px;
+	right:-40px;
+	width:50px;
+	height:50px;
+}
+

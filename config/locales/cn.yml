@@ -1,0 +1,63 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+cn:
+  attendance:
+    
+    operation:
+      login:
+        labLogin: "扫描员工号"
+      registration:
+        chooseWorkunit: "选择一条生产线"
+        execute: "执行："
+        labIn: "登入"
+        labOut: "登出"
+        placeholder: "请在此输入员工号"
+        alertInputStaff: "请输入员工号."
+        labMyWorkunit: "我的生产线"
+        labStaffNum: "人数："
+        butAllout: "全部登出"
+        alertAllout: "全部登出成功"
+        labGroup: "选择员工"
+        cancel: "取消"
+        confirm: "确认"
+        
+    personal:
+      create_squad:
+        labGroup: "分组"
+        labStaffNum: "人数："
+        labAdd: "添加"
+        labEdit: "编辑"
+        labDone: "完成"
+        labDelete: "删除"
+
+
+  layouts:
+    attendance:
+      headline: "考勤系统"
+      operation: "操作"
+      settings: "设置"
+      edit: "编辑账户"
+      logout: "退出"
+      messageBox: "警告!"
+      
+  
+  alert:
+    success: "成功"
+    fail: "失败"
+    permission: "权限受限制"
+    logout: "已注销。"
+    chWorkunitState: "工作状态变更为：%{state}"
+      
+  
+  errors:
+    wrUserPwd: "用户名或密码错误！"
+    nonWorkunit: "工作台不存在！"
+    nonStaff: "员工号不存在！"
+    nonGroup: "工作组不存在！"
+    nonblankGroup: "工作组还有其他组员！"
+    nonStaffLog: "此员工没有登记。"
+    existStaffLog: "此员工已登记，登记点：%{place}"
+    existStaffLogOther: "此员工已在其他地点登记，登记点：%{place}"
+    wrService: "数据中心服务异常。"
+      

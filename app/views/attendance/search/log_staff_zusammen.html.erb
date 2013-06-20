@@ -1,0 +1,25 @@
+<div class="hero-unit font-gray hero-setting">
+	<div class="wrap-small">
+		
+<%= form_tag attendance_log_staff_zusammen_path do %>
+	<label class=" font-gray" >员工号</label>
+    <%= text_field_tag :staffID, params[:staffID] %>
+    <label class=" font-gray" >起始时间</label>
+    <%= text_field_tag :sTime, params[:sTime] %>
+    <label class=" font-gray" >截止时间</label>
+    <%= text_field_tag :eTime, params[:eTime] %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+
+	<% if @logStaff %>
+	<ul>
+		<li>员工号：<%= @logStaff.nr %></li>
+		<li>姓名：<%= @logStaff.name %></li>
+		<li>有效时间(秒)：<%= @value %> s</li>
+	</ul>
+	<% end %>
+
+
+	</div>
+</div>

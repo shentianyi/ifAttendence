@@ -1,0 +1,31 @@
+<div class="hero-unit font-gray hero-setting">
+	<div class="wrap-small">
+
+<table border="1">
+	<tr>
+		<th>员工号</th>
+		<th>姓名</th>
+		<th>时间</th>
+		<th>工作台编号</th>
+		<th>行为</th>
+	</tr>
+	<% @logStaffs.each do |log| %>
+	<tr>
+		<td><%= log.staffNr %></td>
+		<td><%= log.staffName %></td>
+		<td><%= log.time_str %></td>
+		<td><%= log.workunitNr %></td>
+		<td>
+			<% if log.newState %>
+				登入
+			<% else %>
+				登出
+			<% end %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+
+	</div>
+</div>

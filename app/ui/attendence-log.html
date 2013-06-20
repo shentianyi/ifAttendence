@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/general.css" rel="stylesheet" type="text/css">
+		<title>IFAttendence Login</title>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery-ui-1.10.2.custom.min.js"></script>	
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				document.getElementById('staffID').focus();
+				$('.alert').draggable();
+			});							
+		</script>	
+	</head>
+    <body>
+
+    	
+    	    	
+		<div class="navbar">
+			<div class="container">
+				<div class="navbar-inner">
+				<div class="wrap-small">
+					<img src="img/headicon.png">
+					<label class="font-gray display-inline head-explain">Attendence</label>
+					
+				</div>	
+				</div>
+			</div>
+		</div>   
+		
+		<div class="wrap-small">
+		
+
+		
+		
+		
+			<label class=" font-gray font15" style="margin:100px 0px 10px 290px">扫描员工号</label>
+			<input  type="text" style="margin-left:290px;" id="staffID">
+			
+			<div class="log-error font15 text-warning hide">
+				<p>U got wrong</p>
+			</div>
+			
+			
+			
+			
+			
+			    	  <!-- 弹出的警告栏 -->
+
+    		  <div class="alert alert-block" >
+                  <button type="button" class="close" data-dismiss="alert" >&times;</button>
+                     <h4 >Warning!</h4>
+                        <p class="alert-p" >Best check yo self, you're not...</p> 
+               </div>
+			
+		</div>
+
+		   	
+    </body>
+</html>

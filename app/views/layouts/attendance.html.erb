@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IF--Attendance</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+		<div class="navbar">
+			<div class="container">
+				<div class="wrap-small">
+					<img src="/assets/headicon.png">
+					<label class="font-gray display-inline head-explain"><%= t(".headline")%></label>
+					<%= form_tag attendance_operation_url, :class=>'locale', :method=>'get', :style=>'display:inline' do %>
+							<%= select_tag 'set_locale',
+							options_for_select(LANGUAGES, I18n.locale.to_s),
+							onchange: 'this.form.submit()' %>
+					<% end %>
+					<ul class="nav pull-right attendence-nav">
+						<% if @currentUser.nr == "admin" or @currentUser.roles.where(:name=>"captain").first %>
+						<li>
+							<a>全局</a>
+							<dl>
+								<dt>添加</dt>
+								<dd><a href="./create_captain" >添加组长</a></dd>
+								<dd><a href="./create_mem" >添加组员</a></dd>
+								<dd><a href="./create_workunit" >添加流水线</a></dd>
+								<dt>查询</dt>
+								<dd><a href="./log_staff_details" >详细表单</a></dd>
+								<dd><a href="./log_staff_zusammen" >员工概览</a></dd>
+								<dd><a href="./log_workunit_zusammen" >流水线概览</a></dd>
+							</dl>
+						</li>
+						<% end %>
+						<li>
+							<a href="./operation" class="choosen-ope"><%= t(".operation")%></a>
+						</li>
+						<li>
+							<a href="./settings" class="choosen-set"><%= t(".settings")%></a>
+						</li>
+						<li class="divider-vertical"></li>
+						<li>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= @currentUser.name %><b class="caret"></b> </a>
+							<ul class="dropdown-menu user-account">
+								<li><a href="#"><%= t(".edit")%></a></li>
+								 <li class="divider"></li>
+								<li ><a href="./logout" class="user-logout"><%= t(".logout")%></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+<%= yield %>
+
+  <div id="MessageBox" class="alert alert-block hide" >
+      <button type="button" class="close"   >&times;</button>
+      <h4><%= t(".messageBox")%></h4>
+      <p class="alert-p"></p>
+   </div>
+
+</body>
+</html>

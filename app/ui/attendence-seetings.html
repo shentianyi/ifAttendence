@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/attendenceSetting.css" rel="stylesheet" type="text/css">
+		<link href="css/general.css" rel="stylesheet" type="text/css">
+		<link href="css/redmond/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css">
+		<title>IFAttendence Settings</title>
+	</head>
+	<body>
+		<!-- 最上面的头 -->
+		<div class="navbar">
+			<div class="container">
+				<div class="wrap-small">
+					<img src="img/headicon.png">
+					<label class="font-gray display-inline head-explain">Attendence</label>
+					<ul class="nav pull-right attendence-nav">
+						<li>
+							<a href="IF-attendence.html" class="choosen-ope">Operation</a>
+						</li>
+												<li>
+							<a href="attendence-inquery.html" class="choosen-inq">Inquery</a>
+						</li>
+						<li>
+							<a class="choosen-set">Settings</a>
+						</li>
+						<li class="divider-vertical"></li>
+						<li>
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#"> Wayne.Wang <b class="caret"></b> </a>
+							<ul class="dropdown-menu user-account">
+								<li>
+									<a href="#">Edit</a>
+								</li>
+								<li class="divider"></li>
+								<li >
+									<a href="#" class="user-logout">Logout</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 中间的herounit -->
+		<div class="hero-unit font-gray hero-setting">
+			<div class="wrap-small">
+				<!-- 左侧的导航条 -->
+				<div class="tabbable tabs-left">
+					<!-- 左侧的导航项 -->
+					<ul class="nav nav-tabs">
+						<li class="active navTab">
+							<a href="#tab1" data-toggle="tab">Group</a>
+						</li>
+						<!-- <li class="navTab">
+						<a href="#tab2" data-toggle="tab">Staff</a>
+						</li>
+						<li class="navTab">
+						<a href="#tab3" data-toggle="tab">Authority</a>
+						</li> -->
+					</ul>
+
+					<!-- 指引的内容 -->
+					<div class="tab-content">
+						<div class="tab-pane active" id="tab1">
+
+							<!-- 右边的会折叠的部分 -->
+							<div id="accordion">
+								<h3 class="staff-group-id" staff-drag-group="draggable" staff-group-id="group1">Default Group <a class="btn btn-small btn-danger setting-delete-btn pull-right hide" >delete</a>
+								<p class="pull-right setting-staff-count">
+									staff：3
+								</p></h3>
+
+								<div class="group-container">
+									<ul>
+										<li>
+											Tom.Wang
+											<p class="pull-right display-inline setting-staff-number">
+												208564561
+											</p>
+										</li>
+										<li>
+											Funny.Ding
+											<p class="pull-right display-inline setting-staff-number">
+												54683871
+											</p>
+										</li>
+										<li>
+											Weak.Huang
+											<p class="pull-right display-inline setting-staff-number">
+												20838456
+											</p>
+										</li>
+									</ul>
+								</div>
+								<h3 class="staff-group-id"  staff-drag-group="draggable"  staff-group-id="group2">Group 1 <a class="btn btn-small btn-danger setting-delete-btn pull-right hide" >delete</a>
+								<p class="pull-right setting-staff-count">
+									staff：0
+								</p></h3>
+								<div  class="group-container">
+									<ul></ul>
+								</div>
+
+								<h3 class="staff-group-id"  staff-drag-group="draggable"  staff-group-id="group3">Group 2 <a class="btn btn-small btn-danger setting-delete-btn pull-right hide" >delete</a>
+								<p class="pull-right setting-staff-count">
+									staff：3
+								</p></h3>
+								<div class="group-container">
+									<ul>
+										<li>
+											Michel.James
+											<p class="pull-right display-inline setting-staff-number">
+												2083245
+											</p>
+										</li>
+										<li>
+											Dett.Damon
+											<p class="pull-right display-inline setting-staff-number">
+												208351
+											</p>
+										</li>
+										<li>
+											Alice.Tracy
+											<p class="pull-right display-inline setting-staff-number">
+												2083865671
+											</p>
+										</li>
+									</ul>
+								</div>
+
+								<h3   class="staff-group-id"  staff-drag-group="draggable" staff-group-id="group4" onclick="groupDelete">Group 3 <a class="btn btn-small btn-danger setting-delete-btn pull-right hide" >delete</a>
+								<p class="pull-right setting-staff-count">
+									staff：0
+								</p></h3>
+								<div class="group-container">
+									<ul></ul>
+								</div>
+							</div>
+
+							<!-- 控制组的按钮						 -->
+							<div>
+								<a class="btn  btn-primary" id="setting-edit-btn" onclick="settingBtnEdit();">Edit</a>
+								<a class="btn  btn-primary" id="setting-add-btn" onclick="addpop()">Add</a>
+                                <!-- 点击ADD后弹出来的框 -->
+								<div class="addpop hide">
+									<i class="icon-remove add-cancel pull-right" onclick="closepop()"></i>
+
+									<input placeholder="Group name"  type="text" class="span2 inputGroup" />
+									<a class="btn pull-left addGroup " onclick="add_group();">add</a>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- <div class="tab-pane" id="tab2">
+						<p>
+						Howdy, I'm in Section 2.
+						</p>
+						</div>
+
+						<div class="tab-pane" id="tab3">
+						<p>
+						Howdy, I'm in Section 3.
+						</p>
+						</div> -->
+
+					</div>
+				</div>
+				<!-- wrap-small	 -->
+			</div>
+			<!-- hero-unit	 -->
+		</div>
+
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery-ui-1.10.2.custom.min.js"></script>
+		<script src="js/attendenceSetting.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

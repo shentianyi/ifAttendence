@@ -1,0 +1,85 @@
+ul.nav-tabs>li.navTab.active>a{
+	background-color:#eeeeee;
+	border-color:#c2c2c2 transparent #c2c2c2 #c2c2c2;
+	color:#1297cf;
+	padding:15px;
+}
+ul.nav-tabs>li.navTab>a{
+	color:#9d9d9d;
+	padding:15px;
+}
+.tabbable.tabs-left{
+	margin-left:22px;
+	margin-top:-30px;
+}
+.hero-setting{
+	min-height:240px;
+}
+#accordion{
+	width:550px;
+	margin:auto;
+}
+.group-container ul{
+	list-style:none;
+	margin-left:0px;
+}
+.group-container ul li{
+	margin-left:5px;
+	cursor:move;
+	border-bottom:1px solid #c2c2c2;
+}
+.setting-staff-count{
+	margin-right:25px;
+}
+#setting-edit-btn{
+	margin-left:485px;
+	margin-top:20px;
+}
+#setting-add-btn{
+	margin-left:10px;
+		margin-top:20px;
+}
+.btn.btn-small.btn-danger.setting-delete-btn.pull-right{
+	color:white;
+	margin-top:-2px;
+	margin-right:5px;
+	margin-left:-10px;
+	padding:0 3px;
+}
+.setting-staff-number{
+	margin-bottom:0px;
+}
+#setting-edit-btn.setting-done-btn{
+	margin-left:542px;
+}
+.addpop{
+	width:220px;
+	border-radius:6px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	background-color:white;
+	padding:10px 10px 30px;;
+	border:1px solid #c2c2c2;
+	position:relative;
+	left:362px;
+	top:-33px;
+}
+.inputGroup{
+	position:relative;
+	left:-40px;
+	top:21px;
+
+}
+.addGroup{
+	position:relative;
+	left:140px;
+	top:21px;	
+}
+.add-cancel{
+	margin-top:-2px;
+	cursor:pointer;
+}
+.navbar .nav > li > a.choosen-set{
+	cursor:default;
+	color:black;
+}

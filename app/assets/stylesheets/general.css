@@ -1,0 +1,111 @@
+.wrap-small{
+	width:750px;
+	margin:auto;
+}
+.font-gray{
+	color:#9d9d9d;
+}
+.head-explain {
+	position: relative;
+	top: 18px;
+	left: -21px;
+	cursor:default;
+}
+.navbar-inner{
+	border-radius:0px;
+}
+.display-inline{
+	display:inline;
+}
+.font15{
+	font-size:15px;
+}
+.font22{
+	font-size:22px;
+}
+.navbar .nav.attendence-nav{
+	margin-top:36px;
+}
+.dropdown-menu.user-account{
+	min-width:100px;
+}
+.dropdown-menu > li > a.user-logout{
+	color:#FAA732
+}
+label{
+	cursor:default;
+}
+.staff-card{
+	cursor:pointer;
+	color:#9d9d9d;
+	font-size:14px;
+	text-align:center;
+	display:inline-block;
+	width:100px;
+	height:50px;
+	border:1px solid #c2c2c2;
+	padding:3px;
+	margin-bottom:5px;
+} 
+.staff-card label{
+	cursor:pointer;
+}
+.alert{
+	position:absolute;
+	top:30%;
+	left:33%; 
+	width:400px;	
+}
+.alert .close{
+	position:relative;
+	top:-23px;
+	right:-40px;
+	width:50px;
+	height:50px;
+}
+.log-error{
+	margin-left:290px
+}
+
+
+.attendence-nav {
+	z-index: 50
+}
+.attendence-nav li:hover dl > dt, .attendence-nav li:hover dl > dd {
+	display: block;
+}
+.attendence-nav li > dl{
+	position: absolute;
+	background-color: white;
+	margin: 0px -10px;
+}
+.attendence-nav li > dl > dt {
+	display: none;
+	padding-left: 5px;
+/*	font-weight: bold;*/
+}
+.attendence-nav li > dl > dd {
+	display: none;
+	margin: 0px;
+    padding-left: 15px;
+    padding-right:15px;
+}
+.attendence-nav dd:hover {
+	background-color: #dbdbdb;
+}
+.attendence-nav a {
+	text-decoration: none;
+	color: #9D9D9D;
+}
+
+/*****************************  upload file */
+/*//批量添加员工左边部分*/
+.file-upload-place-left{
+	width: 400px;
+	float:left
+}
+/*//批量添加员工右边部分*/
+.file-upload-place-right{
+	display: inline-block;
+	float:left
+}

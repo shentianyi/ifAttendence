@@ -1,0 +1,138 @@
+
+input#entityID {
+	width: 250px;
+}
+.hero-unit.hero-attendence {
+	padding: 60px 0 100px;
+    min-height:220px;
+}
+.entityGroup {
+ margin-bottom:15px;
+  height:110px;
+}
+.wrap-small-left{
+background-color:#eee;
+ width:330px;
+ padding:20px 20px 5px 20px;
+ min-height:230px;	
+position:fixed;
+top:146px;
+
+border-radius:6px;
+border:1px solid #bdbdbd;
+margin-left:20px;
+}
+.worku-head{
+	font-family:"Arial";
+	font-weight:normal
+}
+.wrap-small-right{
+	width:350px;
+	margin-left:440px;
+	margin-top:-4px;
+
+}
+input#staffID {
+	margin-top:2px;
+	width: 250px;
+}
+.staff-logout {
+	margin-left: 5px;
+	margin-top: -5px;
+}
+#go2pause{
+	cursor:pointer;
+}
+.working-state{
+	margin-left:21px;
+	cursor:pointer;
+}
+.icon-abstop{
+	background-image:url("../img/abstop.png");
+	background-position:center 2px;
+	background-repeat:no-repeat;
+}
+.staff-choosen{
+	border:2px solid #1297cf !important;
+	color:#1297cf !important
+}
+#result {
+	font-family: Arial, Verdana, Sans-serif;
+	font-size: 15px;
+	
+}
+#loginError {
+	position: relative;
+	top: -5px;
+}
+.icon-eject {
+	cursor: pointer;
+}
+#log{
+	cursor:pointer;
+	display:inline;
+	margin-left:2px;
+	text-decoration:underline;
+}
+
+.btn-group > .btn:first-child.wu-dropdown{
+	margin-left:-6px;
+	margin-top:-13px
+}
+.wrap-small-right #Accordion .accordion-heading,.accordion-body{
+	border:1px solid #b3b3b3;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	color:#9d9d9d
+}
+.wrap-small-right #Accordion .accordion-heading>a.accordion-toggle{
+	color:#9d9d9d
+}
+.staff-count{
+	width:80px;
+	margin-left:12px;
+}
+.accordion{
+	position:relative;
+	top:10px;
+}
+.worku-btngroup{
+	margin-left:5px;
+	margin-top:2px;
+}
+#worku-title-show{
+	line-height:33px;
+	font-size:40px;
+	font-family:"Arial";
+	margin-top:5px;
+}
+.state-btn-group{
+	margin-top:10px;
+	margin-bottom:15px;
+}
+
+.dropdown-menu > li > a#ul.dropdown-menu{
+	width:110px;
+}
+.navbar .nav > li > a.choosen-ope{
+	cursor:default;
+	color:black;
+}
+.state-btn-group .btn{
+	outline:none;
+	margin-right:-7px;
+	border-radius:0px;
+	-moz-border-radius:0px;
+    -webkit-border-radius:0px;
+}
+.state-btn-group .btn:nth-child(1){
+		border-radius:4px 0px 0px 4px;
+	-moz-border-radius:4px 0px 0px 4px;
+    -webkit-border-radius:4px 0px 0px 4px;
+}
+.state-btn-group .btn:nth-child(4){
+		border-radius:0px 4px 4px 0px;
+	-moz-border-radius:0px 4px 4px 0px;
+    -webkit-border-radius:0px 4px 4px 0px;
+}

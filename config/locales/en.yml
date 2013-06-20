@@ -1,0 +1,62 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  attendance:
+    
+    operation:
+      login:
+        labLogin: "Please input your ID :"
+      registration:
+        chooseWorkunit: "Choose a Workunit :"
+        execute: "execute:"
+        labIn: "login"
+        labOut: "logout"
+        placeholder: "Please input the staff ID"
+        alertInputStaff: "Please input the staff ID"
+        labMyWorkunit: "My Workunit List"
+        labStaffNum: "staff"
+        butAllout: "All Logout"
+        alertAllout: "All Logout"
+        labGroup: "Choose staff"
+        cancel: "cancel"
+        confirm: "confirm"
+        
+    personal:
+      create_squad:
+        labGroup: "Groups"
+        labStaffNum: "staff"
+        labAdd: "add"
+        labEdit: "edit"
+        labDone: "done"
+        labDelete: "delete"
+
+
+  layouts:
+    attendance:
+      headline: "Attendance"
+      operation: "operation"
+      settings: "settings"
+      edit: "edit"
+      logout: "logout"
+      messageBox: "Warning !"
+      
+  
+  alert:
+    success: "success"
+    fail: "fail"
+    permission: "Attendance Permission Denied !"
+    logout: "logout"
+    chWorkunitState: "Work state changed：%{state}"
+      
+  
+  errors:
+    wrUserPwd: "wrong account or password"
+    nonWorkunit: "workunit doesn't exist !"
+    nonStaff: "staff doesn't exist !"
+    nonGroup: "group doesn't exist !"
+    nonblankGroup: "group is not blank !"
+    nonStaffLog: "The staff didn't login."
+    existStaffLog: "The staff has already logged in, at workunit: %{place}"
+    existStaffLogOther: "The staff has already logged in, at workunit: %{place}"
+    wrService: "Data Center has something wrong."

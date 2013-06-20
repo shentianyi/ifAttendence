@@ -1,0 +1,24 @@
+<script type="text/javascript">
+	$(function(){
+		$('#entityID').focus(function(){ $('#loginError').hide(); }).blur(function(){ $('#loginError').show(); });
+		document.getElementById("entityID").focus();
+	})
+</script>
+
+<h1>Login</h1>
+<div class="notice"><%= flash[:notice] %></div>
+
+<%= form_tag  do %>
+	<%= label_tag nil, "请扫描工位的编号："%><br />
+	<%= text_field_tag :entityID, nil, :onkeypress=>"return log_attendance(event);"%>
+<% end %>
+<span id="loginError" style="display: none; color: red">光标丢失！</span>
+<!-- <b>This</b> is what <span style="text-decoration: underline;">I</span> meant. Understand? -->
+
+<script type="text/javascript">
+function log_attendance(event){
+     var e = event ? event : (window.event ? window.event : null);
+     if(e.keyCode == 13)
+     	form1.submit();
+}
+</script>

@@ -1,0 +1,12 @@
+
+
+
+
+
+
+	<% @groupMembers.each do |mem| %>
+	 		<div class="staff-card staff-choosen" onclick="$(this).toggleClass('staff-choosen');">
+            	<label><%= mem.name %></label>
+            	<label memnr><%= mem.nr %></label>
+            </div>
+	<% end %>
