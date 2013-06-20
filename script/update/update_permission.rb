@@ -7,7 +7,7 @@
 perm=Permission.create({ res:"CreateCap", ope:"W", desc:"新建组长" }) unless perm=Permission.where(:res=>'CreateCap').first
 puts perm.desc
 if role = Role.find_by_nr("root")
-  if role.permissions.find(perm)
+  if role.permissions.find_by_id(perm)
     puts "permssion is in role : root"
   else
     role.permissions << perm 
