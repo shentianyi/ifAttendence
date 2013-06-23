@@ -1,63 +1,61 @@
 <link href="/assets/attendenceSetting.css" rel="stylesheet" type="text/css">
 <script src="/assets/attendenceSetting.js"></script>
 
-
 <div class="hero-unit font-gray hero-setting">
-	<div class="wrap-small">
-		<!-- 左侧的导航条 -->
-		<div class="tabbable tabs-left">
-			<!-- 左侧的导航项 -->
-			<ul class="nav nav-tabs">
-				<li class="active navTab">
-					<a href="#tab1" data-toggle="tab"><%= t(".labGroup")%></a>
-				</li>
-			</ul>
+     <div class="wrap-small">
+          <!-- 左侧的导航条 -->
+          <div class="tabbable tabs-left">
+               <!-- 左侧的导航项 -->
+               <ul class="nav nav-tabs">
+                    <li class="active navTab">
+                         <a href="#tab1" data-toggle="tab"><%= t(".labGroup")%></a>
+                    </li>
+               </ul>
 
-			<!-- 指引的内容 -->
-			<div class="tab-content">
-				<div class="tab-pane active" id="tab1">
+               <!-- 指引的内容 -->
+               <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">
 
-					<!-- 右边的会折叠的部分 -->
-					<div id="accordion">
-						<% @mySquads.each do |squ| %>
-							<h3 class="staff-group-id" staff-drag-group="draggable" staff-group-id="<%= squ.nr %>"><%= squ.name %>
-								<a class="btn btn-small btn-danger setting-delete-btn pull-right hide" ><%= t(".labDelete")%></a>
-								<p class="pull-right setting-staff-count">
-									<%= t(".labStaffNum")%>
-									<label class="display-inline " num><%= squ.members.size %></label>
-								</p>
-							</h3>
-							<div class="group-container">
-								<ul>
-									<% squ.members.each do |mem| %>
-										<li memnr="<%= mem.nr %>"><%= mem.name %>
-											<p class="pull-right display-inline setting-staff-number">
-												<%= mem.nr %>
-											</p>
-										</li>
-									<% end %>
-								</ul>
-							</div>
-						<% end %>
-					</div>
+                         <!-- 右边的会折叠的部分 -->
+                         <div id="accordion">
+                              <% @mySquads.each do |squ| %>
+                              <h3 class="staff-group-id" staff-drag-group="draggable" staff-group-id="<%= squ.nr %>"><%= squ.name %> <a class="btn btn-small btn-danger setting-delete-btn pull-right hide" ><%= t(".labDelete")%></a>
+                              <p class="pull-right setting-staff-count">
+                                   <%= t(".labStaffNum")%>
+                                   <label class="display-inline " num><%= squ.members.size %></label>
+                              </p></h3>
+                              <div class="group-container">
+                                   <ul>
+                                        <% squ.members.each do |mem| %>
+                                        <li memnr="<%= mem.nr %>">
+                                             <span><%= mem.name %>&nbsp;</span>
+                                             <p class="pull-right display-inline setting-staff-number">
+                                                  <%= mem.nr %>
+                                             </p>
+                                        </li>
+                                        <% end %>
+                                   </ul>
+                              </div>
+                              <% end %>
+                         </div>
 
-					<!-- 控制组的按钮						 -->
-					<div>
-						<a class="btn  btn-primary" id="setting-edit-btn" labedit="<%= t(".labEdit")%>" labdone="<%= t(".labDone")%>" onclick="settingBtnEdit();"><%= t(".labEdit")%></a>
-						<a class="btn  btn-primary" id="setting-add-btn" onclick="addpop()"><%= t(".labAdd")%></a>
-                        <!-- 点击ADD后弹出来的框 -->
-						<div class="addpop hide">
-							<i class="icon-remove add-cancel pull-right" onclick="closepop()"></i>
-							<input placeholder="Group name"  type="text" class="span2 inputGroup" />
-							<a class="btn pull-left addGroup " onclick="add_group(this);"><%= t(".labAdd")%></a>
-						</div>
-					</div>
+                         <!-- 控制组的按钮						 -->
+                         <div>
+                              <a class="btn  btn-primary" id="setting-edit-btn" labedit="<%= t(".labEdit")%>" labdone="<%= t(".labDone")%>" onclick="settingBtnEdit();"><%= t(".labEdit")%></a>
+                              <a class="btn  btn-primary" id="setting-add-btn" onclick="addpop()"><%= t(".labAdd")%></a>
+                              <!-- 点击ADD后弹出来的框 -->
+                              <div class="addpop hide">
+                                   <i class="icon-remove add-cancel pull-right" onclick="closepop()"></i>
+                                   <input placeholder="Group name"  type="text" class="span2 inputGroup" />
+                                   <a class="btn pull-left addGroup " onclick="add_group(this);"><%= t(".labAdd")%></a>
+                              </div>
+                         </div>
 
-				</div>
-			</div>
-			
-		</div>
-		
-		<!-- wrap-small	 -->
-	</div>
+                    </div>
+               </div>
+
+          </div>
+
+          <!-- wrap-small	 -->
+     </div>
 </div>
