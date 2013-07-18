@@ -20,32 +20,33 @@
 	           <%= submit_tag("查询",{:class=>"btn btn-success"},:name=>'search') %>
                <% end %>
 
-               <table class="table table-bordered table-striped globle-table">
-                    <tr>
-                         <th>&nbsp;</th>
-                         <th>员工号</th>
-                         <th>姓名</th>
-                         <th>状态</th>
-                         <th>&nbsp;</th>
-                    </tr>
-                    <% @members.each_with_index do |mem,i| %>
-                    <tr>
-                         <td><%=i+1%></td>
-                         <td><%= mem.nr %></td>
-                         <td><%= mem.name %></td>
-                         <td><%= mem.state %></td>
-                         <td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_mem(this,'#{mem.nr}');" )%></td>
-                    </tr>
-                    <% end %>
-               </table>
-               <p>
-                    <%= will_paginate @members,{:previous_label=>'<',:next_label=>'>',:page_gap=>'......'}%>
-               </p>
+                <input id="uploadMembersFile" class="uploadWorkunitsFile" type="file" name="files[]" data-url="../attendance/upload_members" >
+                <div class="abstractblock" id="uploadMembersFile-preview" style="display:none;"></div>
+
           </div>
 
           <div class="file-upload-place-right" >
-               <input id="uploadMembersFile" type="file" name="files[]" data-url="../attendance/upload_members" >
-               <div class="abstractblock" id="uploadMembersFile-preview" style="display:none;"></div>
+                <table class="table table-bordered table-striped globle-table">
+                                    <tr>
+                                         <th>&nbsp;</th>
+                                         <th>员工号</th>
+                                         <th>姓名</th>
+                                         <th>状态</th>
+                                         <th>&nbsp;</th>
+                                    </tr>
+                                    <% @members.each_with_index do |mem,i| %>
+                                    <tr>
+                                         <td><%=i+1%></td>
+                                         <td><%= mem.nr %></td>
+                                         <td><%= mem.name %></td>
+                                         <td><%= mem.state %></td>
+                                         <td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_mem(this,'#{mem.nr}');",{:class=>"btn-danger"} )%></td>
+                                    </tr>
+                                    <% end %>
+                </table>
+                <p>
+                      <%= will_paginate @members,{:previous_label=>'<',:next_label=>'>',:page_gap=>'......'}%>
+                </p>
           </div>
 
      </div>

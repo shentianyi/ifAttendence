@@ -23,6 +23,11 @@
                     <input type="submit" class="btn btn-success" value="查询" name="search">
                 </div>
             </form>
+            <input id="uploadMembersFile" class="uploadWorkunitsFile" type="file" data-url="../attendance/upload_members" name="files[]">
+            <div id="uploadMembersFile-preview" class="abstractblock" style="display:none;"></div>
+
+            </div>
+        <div class="file-upload-place-right">
             <table class="table table-bordered table-striped globle-table">
                 <tbody>
                 <tr>
@@ -31,10 +36,15 @@
                     <th>当前员工数量</th>
                     <th> </th>
                 </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td><a class="btn btn-primary" href="../attendance/create_mem?cap=4">添加组员</a></td>
+                    <td><button class="btn-danger" type="button" onclick="delete_mem(this,'4');" name="button">删除</button></td>
+                </tr>
                 </tbody>
             </table>
-            <input id="uploadWorkunitsFile"  type="file" data-url="../attendance/upload_workunit" name="files[]">
-            </div>
+        </div>
         </div>
 
         </div>

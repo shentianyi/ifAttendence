@@ -10,29 +10,29 @@
 		<%= submit_tag "新建", :name=>nil %>
 		<%= submit_tag "查询", :name=>"search" %>
 	<% end %>
+    <input id="uploadWorkunitsFile" class="uploadWorkunitsFile" type="file" name="files[]" data-url="../attendance/upload_workunit" >
+    		<div class="abstractblock" id="uploadWorkunitsFile-preview" style="display:none;">	</div>
 
-	<table border="1">
-		<tr>
-			<th>工作台号</th>
-			<th>状态</th>
-			<th>当前员工数量</th>
-			<th>&nbsp;</th>
-		</tr>
-		<% @units.each do |unit| %>
-		<tr>
-			<td><%= unit.nr %></td>
-			<td><%= unit.state %></td>
-			<td><%= unit.staffs.count %></td>
-			<td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_unit(this,'#{unit.nr}');" )%></td>
-		</tr>
-		<% end %>
-	</table>
-	<p>共计：<span><%= @units.size %></span> 个</p>
 </div>
 
     <div class="file-upload-place-right" >
-		<input id="uploadWorkunitsFile" type="file" name="files[]" data-url="../attendance/upload_workunit" >
-		<div class="abstractblock" id="uploadWorkunitsFile-preview" style="display:none;">	</div>
+		<table class="table table-bordered table-striped globle-table">
+        		<tr>
+        			<th>工作台号</th>
+        			<th>状态</th>
+        			<th>当前员工数量</th>
+        			<th>&nbsp;</th>
+        		</tr>
+        		<% @units.each do |unit| %>
+        		<tr>
+        			<td><%= unit.nr %></td>
+        			<td><%= unit.state %></td>
+        			<td><%= unit.staffs.count %></td>
+        			<td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_unit(this,'#{unit.nr}',{:class=>"btn-danger"});" )%></td>
+        		</tr>
+        		<% end %>
+        	</table>
+        	<p>共计：<span><%= @units.size %></span> 个</p>
     </div>
     
 	</div>
