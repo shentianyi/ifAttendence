@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/ifattendence.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/general.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/redmond/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css">
+    <title>IFAttendence</title>
+    <title></title>
+</head>
+<body>
+<div class="hero-unit font-gray hero-setting">
+    <div class="wrap-small">
+        <div class="file-upload-place-left">
+            <div class="notice"></div>
+            <form method="post" action="/attendance/create_workunit" accept-charset="UTF-8">
+                <div style="margin:0;padding:0;display:inline">
+                    <label for="nr">工作台号：</label>
+                    <input id="unit_nr" type="text" size="30" name="unit[nr]">
+                    <br>
+                    <input type="submit" class="btn btn-primary" value="新建">
+                    <input type="submit" class="btn btn-success" value="查询" name="search">
+                </div>
+            </form>
+            <table class="table table-bordered table-striped globle-table">
+                <tbody>
+                <tr>
+                    <th>工作台号</th>
+                    <th>状态</th>
+                    <th>当前员工数量</th>
+                    <th> </th>
+                </tr>
+                </tbody>
+            </table>
+            <input id="uploadWorkunitsFile"  type="file" data-url="../attendance/upload_workunit" name="files[]">
+            </div>
+        </div>
+
+        </div>
+</div>
+</body>
+</html>

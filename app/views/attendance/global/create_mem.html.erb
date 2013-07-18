@@ -16,11 +16,11 @@
                <%= label_tag :name, "姓名："%>
                <%= text_field_tag :name %>
                <br />
-               <%= submit_tag "新建", :name=>nil %>
-	<%= submit_tag "查询", :name=>"search" %>
+               <%= submit_tag("新建",{:class=>"btn btn-primary"},:name=>nil) %>
+	           <%= submit_tag("查询",{:class=>"btn btn-success"},:name=>'search') %>
                <% end %>
 
-               <table border="1">
+               <table class="table table-bordered table-striped globle-table">
                     <tr>
                          <th>&nbsp;</th>
                          <th>员工号</th>

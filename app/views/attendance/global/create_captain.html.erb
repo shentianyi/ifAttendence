@@ -3,18 +3,18 @@
 
 
 	<div class="notice"><%= flash[:notice] %></div>
-	<%= form_tag  do %>
+	<%= form_tag({:class=>"globle-form"})  do %>
 		<%= label_tag :nr, "员工号：" %>
 		<%= text_field_tag :nr %>
 		<br />
 		<%= label_tag :name, "姓名："%>
 		<%= text_field_tag :name %>
 		<br />
-		<%= submit_tag "新建" %>
+		<%= submit_tag("新建",{:class=>"btn btn-primary"})%>
 	<% end %>
 	
 	<br />
-	<table border="1">
+	<table class="table table-bordered table-striped globle-table">
 		<tr>
 			<th>组长员工号</th>
 			<th>姓名</th>
