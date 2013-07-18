@@ -1,7 +1,7 @@
 <div class="hero-unit font-gray hero-setting">
 	<div class="wrap-small">
 
-<%= form_tag attendance_log_workunit_zusammen_path do %>
+<%= form_tag(attendance_log_workunit_zusammen_path,{:class=>"globle-form"})  do %>
     <label class=" font-gray" >流水线号</label>
     <%= text_field_tag :workunitNr, params[:workunitNr] %>
     <label class=" font-gray" >状态</label>
@@ -10,7 +10,8 @@
     <%= text_field_tag :sTime, params[:sTime] %>
     <label class=" font-gray" >截止时间</label>
     <%= text_field_tag :eTime, params[:eTime] %>
-    <%= submit_tag "Search", :name => nil %>
+    <br />
+    <%= submit_tag("搜索",:name=>nil,{:class=>"btn btn-primary"}) %>
 <% end %>
 
 
