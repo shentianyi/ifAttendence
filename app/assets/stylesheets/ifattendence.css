@@ -1,5 +1,6 @@
 .globle-table{
     background-color:white;
+    max-width:450px;
 }
 .globle-table td{
     word-break:break-all;
