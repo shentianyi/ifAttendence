@@ -7,14 +7,14 @@ class Staff < ActiveRecord::Base
       attr_accessible :workunit_id, :group_id
       
       has_many :staff_role_maps
-      has_many :roles, :through=>:staff_role_maps
+      has_many :roles, :through=>:staff_role_maps,:dependent=>:destroy
       
       belongs_to :workunit
       belongs_to :group
-      has_many :squads, :class_name=>"Group", :foreign_key=>"captain_id", :dependent=>:delete_all
+      has_many :squads, :class_name=>"Group", :foreign_key=>"captain_id", :dependent=>:destroy
       has_many :allmems, :through=>:squads, :source=>:members, :uniq=>true
       
-      has_many :staff_workunit_maps
+      has_many :staff_workunit_maps,:dependent=>:destroy
       has_many :units, :through=>:staff_workunit_maps, :source=>:workunit
       
       
@@ -46,7 +46,15 @@ class Staff < ActiveRecord::Base
                   Digest::SHA2.hexdigest(password + "webepm" + salt)
             end
       end
-  
+     
+       def root?
+         !self.roles.find_by_nr('root').nil?
+       end
+       
+       def captain?
+         !self.roles.find_by_nr('captain').nil?
+       end
+         
     
   private
       

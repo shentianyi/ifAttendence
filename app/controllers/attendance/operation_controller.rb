@@ -57,7 +57,7 @@ class OperationController < Attendance::ApplicationController
   
   def control_workunit_state
       begin
-        raise( RuntimeError, t("errors.nonWorkunit") ) unless workunit = Workunit.find_by_nr( params[:entityID].strip )
+        raise( RuntimeError, t("errors.nonWorkunit") ) unless workunit = Workunit.find_by_id( params[:entityID].strip )
         chstate = params[:state]
         ched = workunit.set_state( chstate, params[:desc] )
         render :json => { :flag=>true, :msg=>t("alert.chWorkunitState", state:chstate ), :changed=>ched, :unit=>workunit.nr }

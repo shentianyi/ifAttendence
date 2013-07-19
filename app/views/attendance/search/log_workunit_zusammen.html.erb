@@ -2,7 +2,7 @@
 	<div class="wrap-small">
 
 <%= form_tag attendance_log_workunit_zusammen_path do %>
-    <label class=" font-gray" >流水线号</label>
+    <label class=" font-gray" >生产线号</label>
     <%= text_field_tag :workunitNr, params[:workunitNr] %>
     <label class=" font-gray" >状态</label>
     <%= text_field_tag :state, params[:state] %>
@@ -16,7 +16,7 @@
 
 	<% if @logUnit %>
 	<ul>
-		<li>流水线号：<%= @logUnit.nr %></li>
+		<li>生产线号：<%= @logUnit.nr %></li>
 		<li>状态：<%= params[:state] %></li>
 		<li>有效时间(秒)：<%= @value %> s</li>
 	</ul>

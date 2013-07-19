@@ -17,9 +17,8 @@
                <%= text_field_tag :name %>
                <br />
                <%= submit_tag "新建", :name=>nil %>
-	<%= submit_tag "查询", :name=>"search" %>
+	          <%= submit_tag "查询", :name=>"search" %>
                <% end %>
-
                <table border="1">
                     <tr>
                          <th>&nbsp;</th>
@@ -34,7 +33,7 @@
                          <td><%= mem.nr %></td>
                          <td><%= mem.name %></td>
                          <td><%= mem.state %></td>
-                         <td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_mem(this,'#{mem.nr}');" )%></td>
+                         <td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_mem(this,'#{mem.id}');" )%></td>
                     </tr>
                     <% end %>
                </table>
@@ -44,7 +43,7 @@
           </div>
 
           <div class="file-upload-place-right" >
-               <input id="uploadMembersFile" type="file" name="files[]" data-url="../attendance/upload_members" >
+             上传组员：  <input id="uploadMembersFile" type="file" name="files[]" data-url="../attendance/upload_members" >
                <div class="abstractblock" id="uploadMembersFile-preview" style="display:none;"></div>
           </div>
 
@@ -57,17 +56,7 @@
      $(function() {
           initial_uploader("#uploadMembersFile");
      })
-     function delete_mem(ele, memNr) {
-          var r = confirm("确认删除" + memNr);
-          if(r)
-               $.post("../attendance/delete_mem", {
-                    memNr : memNr
-               }, function(data) {
-                    if(data.flag)
-                         $(ele).parents("tr").remove();
-                    MessageBox(data.msg);
-               }, "json")
-     }
+  
 
      ///////////////////////////////////////////////////////////////          above for  upload
 </script>

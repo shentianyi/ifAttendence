@@ -52,7 +52,7 @@ cn:
   
   errors:
     wrUserPwd: "用户名或密码错误！"
-    nonWorkunit: "工作台不存在！"
+    nonWorkunit: "生产线不存在！"
     nonStaff: "员工号不存在！"
     nonGroup: "工作组不存在！"
     nonblankGroup: "工作组还有其他组员！"

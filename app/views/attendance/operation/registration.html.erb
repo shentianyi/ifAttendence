@@ -53,7 +53,7 @@
 			<div id="accordion" class="accordion">
 				<% @workunits.each do |unit| %>
 					<h3 unitnr="<%= unit.nr %>" >
-					<p class="display-inline"><%= unit.nr %></p>
+					<p class="display-inline" unit="<%=unit.id%>"><%= unit.nr %></p>
 					<div class="pull-right staff-count ">
 						<label class="display-inline "><%= t(".labStaffNum")%></label>
 						<label class="display-inline" staffnum ><%= unit.staffs.count %></label>

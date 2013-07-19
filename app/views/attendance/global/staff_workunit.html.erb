@@ -27,7 +27,7 @@
                          <td><%= unit.nr %></td>
                          <td><%= unit.state %></td>
                          <td><%= unit.staffs.count %></td>
-                         <td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_unit(this,'#{unit.id}');" )%></td>
+                         <td><%= button_tag( "删除", :type=>"button", :onclick=>"reomve_staff_workunit(this,'#{unit.map_id}');" )%></td>
                     </tr>
                     <% end %>
                </table>
@@ -50,16 +50,6 @@
      $(function() {
           initial_uploader("#uploadWorkunitsFile");
      })
-     function delete_unit(ele, id) {
-          if(confirm("确认删除?"))
-               $.post("../attendance/delete_workunit", {
-                    id : id
-               }, function(data) {
-                    if(data.flag)
-                         $(ele).parents("tr").remove();
-                    MessageBox(data.msg);
-               }, "json")
-     }
-
+  
      ///////////////////////////////////////////////////////////////          above for  upload
 </script>

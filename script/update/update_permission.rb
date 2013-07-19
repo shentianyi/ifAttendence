@@ -14,3 +14,13 @@ if role = Role.find_by_nr("root")
     puts 'add to root success'
   end
 end
+
+# add admin to captain
+if admin=Staff.find_by_nr('admin')
+ unless admin.captain?
+     puts "admin is not captain"
+     admin.roles<< Role.find_by_nr("captain")
+   else
+     puts "admin is captain"
+ end
+end

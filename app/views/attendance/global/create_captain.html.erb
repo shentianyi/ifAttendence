@@ -1,37 +1,45 @@
 <div class="hero-unit font-gray hero-setting">
-	<div class="wrap-small">
+     <div class="wrap-small">
 
+          <div class="notice">
+               <%= flash[:notice] %>
+          </div>
+          <%= form_tag  do %>
+          <%= label_tag :nr, "员工号：" %>
+          <%= text_field_tag :nr %>
+          <br />
+          <%= label_tag :name, "姓名："%>
+          <%= text_field_tag :name %>
+          <br />
+          <%= submit_tag "新建" %>
+          <% end %>
 
-	<div class="notice"><%= flash[:notice] %></div>
-	<%= form_tag  do %>
-		<%= label_tag :nr, "员工号：" %>
-		<%= text_field_tag :nr %>
-		<br />
-		<%= label_tag :name, "姓名："%>
-		<%= text_field_tag :name %>
-		<br />
-		<%= submit_tag "新建" %>
-	<% end %>
-	
-	<br />
-	<table border="1">
-		<tr>
-			<th>组长员工号</th>
-			<th>姓名</th>
-			<th>状态</th>
-			<th>&nbsp;</th>
-		</tr>
-		<% @caps.each do |cap| %>
-		<tr>
-			<td><%= cap.nr %></td>
-			<td><%= cap.name %></td>
-			<td><%= cap.state %></td>
-			<td><a href="../attendance/create_mem?cap=<%=cap.id%>">添加组员</a></td>
-		</tr>
-		<% end %>
-	</table>
-	<p>共计：<span><%= @caps.size %></span> 人</p>
+          <br />
+          <table border="1">
+               <tr>
+                    <th>&nbsp;</th>
+                    <th>组长员工号</th>
+                    <th>姓名</th>
+                    <th>状态</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+               </tr>
+               <% @caps.each_with_index do |cap,i| %>
+               <tr>
+                    <td><%= i+1%></td>
+                    <td><%= cap.nr %></td>
+                    <td><%= cap.name %></td>
+                    <td><%= cap.state %></td>
+                    <td><a href="../attendance/create_mem?cap=<%= cap.id%>">添加组员</a></td>
+                    <td><a href="../attendance/assign_workunit?cap=<%= cap.id%>">分配生产线</a></td>
+                    <td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_mem(this,'#{cap.id}');" )%></td>
 
-
-	</div>
+               </tr>
+               <% end %>
+          </table>
+          <p>
+               共计：<span><%= @caps.size %></span> 人
+          </p>
+     </div>
 </div>
