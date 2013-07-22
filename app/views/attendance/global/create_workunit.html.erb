@@ -1,22 +1,20 @@
 <div class="hero-unit font-gray hero-setting">
 	<div class="wrap-small clearfix">
 	
-<div class="file-upload-place-left">	
-	<div class="notice"><%= flash[:notice] %></div>
-	<%= form_tag  do %>
-		<%= label_tag :nr, "工作台号：" %>
-		<%= text_field :unit, :nr %>
-		<br />
-		<%= submit_tag "新建", :name=>nil %>
-		<%= submit_tag "查询", :name=>"search" %>
-	<% end %>
-    <input id="uploadWorkunitsFile" class="uploadWorkunitsFile" type="file" name="files[]" data-url="../attendance/upload_workunit" >
-    		<div class="abstractblock" id="uploadWorkunitsFile-preview" style="display:none;">	</div>
-
-</div>
-
-    <div class="file-upload-place-right" >
-		<table class="table table-bordered table-striped globle-table">
+       <div class="file-upload-place-left">
+	     <div class="notice"><%= flash[:notice] %></div>
+	     <%= form_tag  do %>
+		 <%= label_tag :nr, "工作台号：" %>
+		 <%= text_field :unit, :nr %>
+		 <br />
+		 <%= submit_tag "新建", :name=>nil %>
+		 <%= submit_tag "查询", :name=>"search" %>
+	     <% end %>
+         <input id="uploadWorkunitsFile" class="uploadWorkunitsFile" type="file" name="files[]" data-url="../attendance/upload_workunit" >
+         <div class="abstractblock" id="uploadWorkunitsFile-preview" style="display:none;">	</div>
+        </div>
+        <div class="file-upload-place-right" >
+		    <table class="table table-bordered table-striped globle-table">
         		<tr>
         			<th>工作台号</th>
         			<th>状态</th>
@@ -33,8 +31,7 @@
         		<% end %>
         	</table>
         	<p>共计：<span><%= @units.size %></span> 个</p>
-    </div>
-    
+         </div>
 	</div>
 </div>
 

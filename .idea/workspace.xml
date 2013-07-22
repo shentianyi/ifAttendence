@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c470a190-5550-41e9-a415-e1dd6802cf59" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/attendance/global/create_workunit.html.erb" afterPath="$PROJECT_DIR$/app/views/attendance/global/create_workunit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/general.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/general.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/ifattendence.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/ifattendence.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ifAttendence.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374198123514" ignored="false" />
+    <file path="/Dummy.txt" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374462702364" ignored="false" />
     <file path="$PROJECT_DIR$/../JIT/index.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374222787600" ignored="false" />
     <file path="/index.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374222766434" ignored="false" />
     <file path="/globle-addMonitor.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374130251776" ignored="false" />
     <file path="/create_captain.html.erb" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374119194524" ignored="false" />
-    <file path="/ifattendence.css" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374129830286" ignored="false" />
+    <file path="/ifattendence.css" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374462734358" ignored="false" />
     <file path="/create_mem.html.erb" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374119510601" ignored="false" />
     <file path="/log_workunit_zusammen.html.erb" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374120156928" ignored="false" />
     <file path="/log_staff_zusammen.html.erb" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374120105762" ignored="false" />
@@ -27,10 +28,12 @@
     <file path="$PROJECT_DIR$/../JIT/css/responsive-nav.css" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374198040636" ignored="false" />
     <file path="$PROJECT_DIR$/../JIT/product-whole.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374226955938" ignored="false" />
     <file path="/product-whole.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374226937914" ignored="false" />
-    <file path="$PROJECT_DIR$/../railsEpm/app/assets/dashboard.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374228382910" ignored="false" />
+    <file path="$PROJECT_DIR$/../railsEpm/app/assets/dashboard.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374456305731" ignored="false" />
     <file path="$PROJECT_DIR$/../railsEpm/app/assets/stylesheets/brilliantech.railsepm.css" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374228350190" ignored="false" />
     <file path="/brilliantech.railsepm.css" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374227732814" ignored="false" />
     <file path="/dashboard.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374228224418" ignored="false" />
+    <file path="$PROJECT_DIR$/../railsEpm/app/assets/javascripts/brilliantech.railsepm.js" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374456305731" ignored="false" />
+    <file path="/general.css" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374463100328" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,19 +53,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ifAttendence.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ifAttendence.js">
+      <file leaf-file-name="globle-addMonitor.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/globle-addMonitor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="16" selection-start="2635" selection-end="2635" vertical-scroll-proportion="0.0">
+            <state line="5" column="157" selection-start="217" selection-end="217" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="globle-addMonitor.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/globle-addMonitor.html">
+      <file leaf-file-name="create_captain.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_captain.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="138" selection-start="56" selection-end="56" vertical-scroll-proportion="-1.875">
+            <state line="5" column="27" selection-start="148" selection-end="159" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_mem.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_mem.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="6" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,32 +83,23 @@
       <file leaf-file-name="attendenceSetting.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/attendenceSetting.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="general.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="general.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/general.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="13" selection-start="1529" selection-end="1529" vertical-scroll-proportion="-59.423077">
+            <state line="125" column="15" selection-start="1880" selection-end="1880" vertical-scroll-proportion="2.0010672">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ifattendence.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ifattendence.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/ifattendence.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="20" selection-start="63" selection-end="63" vertical-scroll-proportion="0.028571429">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="attendenceSetting.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/attendenceSetting.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -126,17 +129,18 @@
         <option value="$PROJECT_DIR$/app/views/attendance/search/log_staff_details.html.erb" />
         <option value="$PROJECT_DIR$/app/views/attendance/search/log_workunit_zusammen.html.erb" />
         <option value="$PROJECT_DIR$/app/views/attendance/search/log_staff_zusammen.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/attendance/global/create_workunit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/attendance/global/create_mem.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/globle-addMonitor.html" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/general.css" />
+        <option value="$PROJECT_DIR$/app/views/attendance/global/create_workunit.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/ifattendence.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/general.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
     <option name="width" value="1600" />
-    <option name="height" value="1200" />
+    <option name="height" value="1109" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -164,6 +168,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -218,85 +223,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="attendance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="attendance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="personal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="attendance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,38 +307,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="vcs.Subversion" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -437,13 +341,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1600" height="1200" extended-state="0" />
+    <frame x="0" y="22" width="1600" height="1109" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24984147" sideWeight="0.91757244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2054534" sideWeight="0.91757244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -549,66 +453,64 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_captain.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="138" selection-end="161" vertical-scroll-proportion="0.0697026" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_mem.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="148" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.58550185" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_workunit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="77" selection-start="1189" selection-end="1189" vertical-scroll-proportion="0.46003717" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/attendenceSetting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/IF-inquery.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ifAttendence.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="16" selection-start="2635" selection-end="2635" vertical-scroll-proportion="0.0">
+        <state line="88" column="16" selection-start="2635" selection-end="2635" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/attendenceSetting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_workunit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="19" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.55851066" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_mem.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="6" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_captain.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="27" selection-start="148" selection-end="159" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/globle-addMonitor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="138" selection-start="56" selection-end="56" vertical-scroll-proportion="-1.875">
+        <state line="5" column="157" selection-start="217" selection-end="217" vertical-scroll-proportion="-3.125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/attendenceSetting.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="13" selection-start="1529" selection-end="1529" vertical-scroll-proportion="-59.423077">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/ifattendence.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="63" selection-end="63" vertical-scroll-proportion="0.028571429">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="15" selection-start="1880" selection-end="1880" vertical-scroll-proportion="2.0010672">
           <folding />
         </state>
       </provider>

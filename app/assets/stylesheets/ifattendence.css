@@ -1,15 +1,4 @@
-.globle-table{
-    background-color:white;
-    max-width:450px;
-}
-.globle-table td{
-    word-break:break-all;
-    word-wrap:break-word;
-}
-.globle-form{
-    width:250px;
-    margin:20px auto;
-}
+
 .uploadWorkunitsFile{
     margin-top:30px;
 }

@@ -1,3 +1,19 @@
+.globle-table{
+    background-color:white;
+    max-width:450px;
+}
+.globle-table th{
+    font-size:15px;
+}
+.globle-table td{
+    word-break:break-all;
+    word-wrap:break-word;
+    font-size:15px;
+}
+.globle-form{
+    width:250px;
+    margin:20px auto;
+}
 .wrap-small{
 	width:750px;
 	margin:auto;
@@ -107,5 +123,5 @@ label{
 /*//批量添加员工右边部分*/
 .file-upload-place-right{
 	display: inline-block;
-	float:left
+	float:right
 }
