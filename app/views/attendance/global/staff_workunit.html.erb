@@ -5,12 +5,11 @@
                <div class="notice">
                     <%= flash[:notice] %>
                </div>
-               <%= form_tag  do %>
+               <%= form_tag('/attendance/staff_workunit',:method=>:post) do %>
                <%= label_tag :nr, "生产线号：" %>
                <%= text_field :unit, :nr %>
                <br />
                <%= submit_tag("新建",:name=>nil,:class=>"btn btn-primary") %>
-               <%= submit_tag("查询",:name=>'search',:class=>"btn btn-success") %>
                <% end %>
 
                <table border="1" class="table table-bordered table-striped globle-table">
