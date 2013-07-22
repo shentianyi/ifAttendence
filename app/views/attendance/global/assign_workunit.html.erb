@@ -1,0 +1,84 @@
+<div class="hero-unit font-gray hero-setting">
+     <div class="wrap-small clearfix">
+          <div class="file-upload-place-left">
+               <div class="notice">
+                    <%= flash[:notice] %>
+               </div>
+               <div>
+                    已分配生产线：
+               </div>
+                <table border="1" class="table table-bordered table-striped globle-table">
+                    <tr>
+                         <th>&nbsp;</th>
+                         <th>生产线号</th>
+                         <th>状态</th>
+                         <th>当前员工数量</th>
+                         <th>&nbsp;</th>
+                    </tr>
+                    <% @units.each_with_index do |unit,i| %>
+                    <tr>
+                         <td><%= i+1%></td>
+                         <td><%= unit.nr %></td>
+                         <td><%= unit.state %></td>
+                         <td><%= unit.staffs.count %></td>
+                         <td><%= button_tag( "删除", :type=>"button", :onclick=>"reomve_staff_workunit(this,'#{unit.map_id}',reload);" )%></td>
+                    </tr>
+                    <% end %>
+               </table>
+               <p>
+                    共计：<span><%= @units.size %></span> 个
+               </p> 
+          </div>
+         
+              <div class="file-upload-place-right" >
+               <div>
+                    未分配生产线：
+               </div>
+                <table border="1" class="table table-bordered table-striped globle-table">
+                    <tr>
+                         <th>&nbsp;</th>
+                         <th>生产线号</th>
+                         <th>状态</th>
+                         <th>当前员工数量</th>
+                         <th>&nbsp;</th>
+                    </tr>
+                    <% @uunits.each_with_index do |unit,i| %>
+                    <tr>
+                         <td><%= i+1%></td>
+                         <td><%= unit.nr %></td>
+                         <td><%= unit.state %></td>
+                         <td><%= unit.staffs.count %></td>
+                         <td><%= button_tag( "分 配", :type=>"button", :onclick=>"assign_staff_workunit('#{unit.id}',reload);" )%></td>
+                    </tr>
+                    <% end %>
+               </table>
+               <p>
+                    共计：<span><%= @uunits.size %></span> 个
+               </p>
+
+          </div>
+     </div>
+</div>
+<input type="hidden" value="<%= @cap%>" id="cap_id"/>
+<script src="/assets/jquery.file.upload/jquery.fileupload.js" type="text/javascript"></script>
+<script type="text/javascript">
+     ///////////////////////////////////////////////////////////////          upload
+
+     function reload() {
+          window.location.reload();
+     }
+
+     function assign_staff_workunit(id, call) {
+          if($("#cap_id").val()) {
+               $.post("../attendance/assign_workunit", {
+                    cap : $("#cap_id").val(),
+                    unit_id : id
+               }, function() {
+                    if(call)
+                         call();
+               });
+          }
+     }
+
+     ///////////////////////////////////////////////////////////////          above for  upload
+</script>

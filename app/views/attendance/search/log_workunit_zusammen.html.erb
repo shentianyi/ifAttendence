@@ -1,28 +1,31 @@
 <div class="hero-unit font-gray hero-setting">
-	<div class="wrap-small">
+     <div class="wrap-small">
+          <%= form_tag(attendance_log_workunit_zusammen_path,{:class=>"globle-form"})  do %>
+          <label class=" font-gray" >生产线号</label>
+          <%= text_field_tag :workunitNr, params[:workunitNr] %>
+          <label class=" font-gray" >状态</label>
+          <%= text_field_tag :state, params[:state] %>
+          <label class=" font-gray" >起始时间</label>
+          <%= text_field_tag :sTime, params[:sTime] %>
+          <label class=" font-gray" >截止时间</label>
+          <%= text_field_tag :eTime, params[:eTime] %>
+          <br />
+          <%= submit_tag("搜索",:name=>nil,{:class=>"btn btn-primary"}) %>
+          <% end %>
 
-<%= form_tag(attendance_log_workunit_zusammen_path,{:class=>"globle-form"})  do %>
-    <label class=" font-gray" >流水线号</label>
-    <%= text_field_tag :workunitNr, params[:workunitNr] %>
-    <label class=" font-gray" >状态</label>
-    <%= text_field_tag :state, params[:state] %>
-    <label class=" font-gray" >起始时间</label>
-    <%= text_field_tag :sTime, params[:sTime] %>
-    <label class=" font-gray" >截止时间</label>
-    <%= text_field_tag :eTime, params[:eTime] %>
-    <br />
-    <%= submit_tag("搜索",:name=>nil,{:class=>"btn btn-primary"}) %>
-<% end %>
+          <% if @logUnit %>
+          <ul>
+               <li>
+                    生产线号：<%= @logUnit.nr %>
+               </li>
+               <li>
+                    状态：<%= params[:state] %>
+               </li>
+               <li>
+                    有效时间(秒)：<%= @value %> s
+               </li>
+          </ul>
+          <% end %>
 
-
-	<% if @logUnit %>
-	<ul>
-		<li>流水线号：<%= @logUnit.nr %></li>
-		<li>状态：<%= params[:state] %></li>
-		<li>有效时间(秒)：<%= @value %> s</li>
-	</ul>
-	<% end %>
-
-
-	</div>
+     </div>
 </div>

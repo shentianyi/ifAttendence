@@ -3,7 +3,7 @@ class Workunit < ActiveRecord::Base
   attr_accessible :nr, :state
   
   has_many :staffs
-  has_many :staff_workunit_maps, :dependent=>:delete_all
+  has_many :staff_workunit_maps, :dependent=>:destroy
   has_many :owners, :through=>:staff_workunit_maps, :source=>:staff
   
   validates :nr, :presence => true, :uniqueness => true
