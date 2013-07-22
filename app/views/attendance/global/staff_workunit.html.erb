@@ -1,7 +1,7 @@
 <div class="hero-unit font-gray hero-setting">
      <div class="wrap-small clearfix">
 
-          <div class="file-upload-place-left">
+          <div class="file-upload-place-left file-upload-place-left">
                <div class="notice">
                     <%= flash[:notice] %>
                </div>
@@ -37,7 +37,8 @@
           </div>
 
           <div class="file-upload-place-right" >
-               <input id="uploadWorkunitsFile" type="file" name="files[]" data-url="../attendance/upload_workunit" >
+               <input id="uploadWorkunitsFile" type="file" name="files[]" data-url="../attendance/upload_workunit" />
+               <br />
                <div class="abstractblock" id="uploadWorkunitsFile-preview" style="display:none;"></div>
           </div>
 
