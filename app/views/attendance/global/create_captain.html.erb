@@ -4,18 +4,19 @@
           <div class="notice">
                <%= flash[:notice] %>
           </div>
-          <%= form_tag  do %>
+
+          <%= form_tag({:class=>"globle-form"})  do %>
           <%= label_tag :nr, "员工号：" %>
           <%= text_field_tag :nr %>
-          <br />
+        <br />
           <%= label_tag :name, "姓名："%>
           <%= text_field_tag :name %>
           <br />
-          <%= submit_tag "新建" %>
+          <%= submit_tag("新建",{:class=>"btn btn-primary"})%>
           <% end %>
 
           <br />
-          <table border="1">
+          <table  class="table table-bordered table-striped globle-table">
                <tr>
                     <th>&nbsp;</th>
                     <th>组长员工号</th>
@@ -33,11 +34,11 @@
                     <td><%= cap.state %></td>
                     <td><a href="../attendance/create_mem?cap=<%= cap.id%>">添加组员</a></td>
                     <td><a href="../attendance/assign_workunit?cap=<%= cap.id%>">分配生产线</a></td>
-                    <td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_mem(this,'#{cap.id}');" )%></td>
+                    <td><%= button_tag( "删除", :type=>"button", :onclick=>"delete_mem(this,'#{cap.id}');",:class=>" btn-danger" )%></td>
 
                </tr>
                <% end %>
-          </table>
+          </table> 
           <p>
                共计：<span><%= @caps.size %></span> 人
           </p>

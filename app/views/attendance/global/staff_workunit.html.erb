@@ -9,11 +9,11 @@
                <%= label_tag :nr, "生产线号：" %>
                <%= text_field :unit, :nr %>
                <br />
-               <%= submit_tag "新建", :name=>nil %>
-               <%= submit_tag "查询", :name=>"search" %>
+               <%= submit_tag("新建",:name=>nil,:class=>"btn btn-primary") %>
+               <%= submit_tag("查询",:name=>'search',:class=>"btn btn-success") %>
                <% end %>
 
-               <table border="1">
+               <table border="1" class="table table-bordered table-striped globle-table">
                     <tr>
                          <th>&nbsp;</th>
                          <th>生产线号</th>
