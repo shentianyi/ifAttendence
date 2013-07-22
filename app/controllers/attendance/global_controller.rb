@@ -11,6 +11,7 @@ module Attendance
     def create_captain
       roleCap = Role.where( :nr=>"captain", :name=>"captain" ).first
       if request.get?
+        @sfaff=Staff.new
         else
         nr = params[:nr]
         name = params[:name]

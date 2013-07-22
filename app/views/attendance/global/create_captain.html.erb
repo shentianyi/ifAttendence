@@ -5,12 +5,10 @@
                <%= flash[:notice] %>
           </div>
 
-          <%= form_tag({:class=>"globle-form"})  do %>
-          <%= label_tag :nr, "员工号：" %>
-          <%= text_field_tag :nr %>
-        <br />
-          <%= label_tag :name, "姓名："%>
-          <%= text_field_tag :name %>
+          <%= form_tag nil,  :class=>"globle-form" do %>
+          <%= label_tag :nr, "员工号：" %><%= text_field_tag :nr %>
+          <br />
+          <%= label_tag :name, "姓名："%><%= text_field_tag :name %>
           <br />
           <%= submit_tag("新建",{:class=>"btn btn-primary"})%>
           <% end %>
@@ -38,7 +36,7 @@
 
                </tr>
                <% end %>
-          </table> 
+          </table>
           <p>
                共计：<span><%= @caps.size %></span> 人
           </p>
