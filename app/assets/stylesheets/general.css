@@ -1,5 +1,8 @@
-.globle-table{
+.globle-table
+{
     background-color:white;
+}
+.file-upload-place-right .globle-table{
     max-width:450px;
 }
 .globle-table th{
@@ -11,8 +14,16 @@
     font-size:15px;
 }
 .globle-form{
-    width:250px;
-    margin:20px auto;
+    width:295px;
+    margin:20px auto 40px;
+}
+.manageC-label{
+    width:60px;
+    display:inline-block
+}
+.manageC-btn{
+    float:right;
+    margin-right:10px;
 }
 .wrap-small{
 	width:750px;
