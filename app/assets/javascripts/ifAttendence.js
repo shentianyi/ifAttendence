@@ -6,7 +6,7 @@ $(document).ready(function() {
           active : false,
           heightStyle : "content"
      });
-     $("#staff").draggable();
+//     $("#staff").draggable();
      $('.allLogout').bind('click', function() {
           unitnr = $(this).parents('ul[unitnr]').attr('unitnr');
           $(this).parent().prevAll().each(function(index, e) {
