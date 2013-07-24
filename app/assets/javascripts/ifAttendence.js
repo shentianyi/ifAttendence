@@ -140,6 +140,8 @@ function batch_login() {
                          MessageBoxAdd($(e).children('label[memnr]').text() + " : " + data.msg + "<br />");
                }, 'json');
           });
+     } else {
+          MessageBox("未选择生产线！");
      }
 }
 
@@ -176,6 +178,8 @@ function register_attendance(event) {
                } else {
                     result.innerHTML = $('#sortsoferrors > p[alertInputStaff]').text();
                }
+          } else {
+               MessageBox("未选择生产线！");
           }
           result_content();
      }

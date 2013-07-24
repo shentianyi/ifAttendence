@@ -7,18 +7,19 @@ require 'thrift/datahouse'
 # else
   # transport = ::Thrift::FramedTransport.new(::Thrift::Socket.new('192.168.0.21', '9001'))
 # end
-# protocol=::Thrift::BinaryProtocol.new(transport,false)
-# $thrift = CZ::Epm::Thrift::Datahouse::Client.new(protocol)
-# transport.open
-# if defined?(PhusionPassenger)
-  # PhusionPassenger.on_event(:starting_worker_process) do |forked|
-    # if forked
-     # transport.close
-     # $thrift = CZ::Epm::Thrift::Datahouse::Client.new(protocol)
-     # transport.open  
-   # end
-  # end
-# end
+transport = ::Thrift::FramedTransport.new(::Thrift::Socket.new('localhost', '9001'))
+protocol=::Thrift::BinaryProtocol.new(transport,false)
+$thrift = CZ::Epm::Thrift::Datahouse::Client.new(protocol)
+transport.open
+if defined?(PhusionPassenger)
+  PhusionPassenger.on_event(:starting_worker_process) do |forked|
+    if forked
+     transport.close
+     $thrift = CZ::Epm::Thrift::Datahouse::Client.new(protocol)
+     transport.open  
+   end
+  end
+end
 
 
 class Time

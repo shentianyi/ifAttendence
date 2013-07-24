@@ -1,12 +1,4 @@
-
-
-if  ENV["USER"]=="ding"
-# "wangsong's PC"
-  $thrift_access_key = "uv_p5iJBfuLjRoPHQq9ezQ"
-else
-  $thrift_access_key = "diyeleS3oXBHTQohr5sgmA"
-end
-
+$thrift_access_key = "diyeleS3oXBHTQohr5sgmA"
 
 $TempFileDir = "#{Rails.root}/tmp"
 
