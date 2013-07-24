@@ -6,13 +6,13 @@ $(document).ready(function() {
           active : false,
           heightStyle : "content"
      });
-//     $("#staff").draggable();
+     //     $("#staff").draggable();
      $('.allLogout').bind('click', function() {
           unitnr = $(this).parents('ul[unitnr]').attr('unitnr');
           $(this).parent().prevAll().each(function(index, e) {
                $.post("./operation", {
                     staffID : $(e).attr('staffnr'),
-                    entityID : unitnr,
+                    entityID : $(this).parents('ul[unitnr]').attr('unit'),
                     logType : "out"
                }, function(data) {
                     if(data.flag) {
@@ -120,25 +120,27 @@ function squad_members(e) {
 
 function batch_login() {
      MessageBoxClear();
-     $('.staff-choosen').each(function(index, e) {
-          $.post("./operation", {
-               staffID : $(e).children('label[memnr]').text(),
-               entityID : document.getElementById('worku-title-show').innerHTML,
-               logType : $('#log').attr("state")
-          }, function(data) {
-               if(data.flag) {
-                    var temp = $('h3[unitnr="' + data.unit + '"]').find('label[staffnum]')
-                    if(data.type == 'in') {
-                         $('ul[unitnr="' + data.unit + '"]').prepend($('<li staffnr=' + data.staffnr + ' >' + data.staffnr + ' : ' + data.staffname + '</li>'));
-                         temp.text(parseInt(temp.text()) + 1);
-                    } else {
-                         $('li[staffnr=' + data.staffnr + ']').remove();
-                         temp.text(parseInt(temp.text()) - 1);
-                    }
-               } else
-                    MessageBoxAdd($(e).children('label[memnr]').text() + " : " + data.msg + "<br />");
-          }, 'json');
-     });
+     if($('#worku-title-show').attr("unit")) {
+          $('.staff-choosen').each(function(index, e) {
+               $.post("./operation", {
+                    staffID : $(e).children('label[memnr]').text(),
+                    entityID : $('#worku-title-show').attr("unit"),
+                    logType : $('#log').attr("state")
+               }, function(data) {
+                    if(data.flag) {
+                         var temp = $('h3[unitnr="' + data.unit + '"]').find('label[staffnum]')
+                         if(data.type == 'in') {
+                              $('ul[unitnr="' + data.unit + '"]').prepend($('<li staffnr=' + data.staffnr + ' >' + data.staffnr + ' : ' + data.staffname + '</li>'));
+                              temp.text(parseInt(temp.text()) + 1);
+                         } else {
+                              $('li[staffnr=' + data.staffnr + ']').remove();
+                              temp.text(parseInt(temp.text()) - 1);
+                         }
+                    } else
+                         MessageBoxAdd($(e).children('label[memnr]').text() + " : " + data.msg + "<br />");
+               }, 'json');
+          });
+     }
 }
 
 //员工号扫描完敲回车
@@ -148,32 +150,33 @@ function register_attendance(event) {
      var result = document.getElementById('result');
 
      if(e.keyCode == 13) {
-          //判断输入框中是否有值
-          if(staff.value) {
-               $.post("./operation", {
-                    staffID : staff.value,
-                    entityID : document.getElementById('worku-title-show').innerHTML,
-                    logType : $('#log').attr("state")
-               }, function(data) {
-                    if(data.flag) {
-                         var temp = $('h3[unitnr="' + data.unit + '"]').find('label[staffnum]')
-                         if(data.type == 'in') {
-                              $('ul[unitnr="' + data.unit + '"]').prepend($('<li staffnr=' + data.staffnr + ' >' + data.staffnr + ' : ' + data.staffname + '</li>'));
-                              temp.text(parseInt(temp.text()) + 1);
-                              $('#result').attr('class', 'text-success');
-                         } else {
-                              $('li[staffnr=' + data.staffnr + ']').remove();
-                              temp.text(parseInt(temp.text()) - 1);
-                              $('#result').attr('class', 'text-warning');
+          if($('#worku-title-show').attr("unit")) {
+               //判断输入框中是否有值
+               if(staff.value) {
+                    $.post("./operation", {
+                         staffID : staff.value,
+                         entityID : $('#worku-title-show').attr("unit"),
+                         logType : $('#log').attr("state")
+                    }, function(data) {
+                         if(data.flag) {
+                              var temp = $('h3[unitnr="' + data.unit + '"]').find('label[staffnum]')
+                              if(data.type == 'in') {
+                                   $('ul[unitnr="' + data.unit + '"]').prepend($('<li staffnr=' + data.staffnr + ' >' + data.staffnr + ' : ' + data.staffname + '</li>'));
+                                   temp.text(parseInt(temp.text()) + 1);
+                                   $('#result').attr('class', 'text-success');
+                              } else {
+                                   $('li[staffnr=' + data.staffnr + ']').remove();
+                                   temp.text(parseInt(temp.text()) - 1);
+                                   $('#result').attr('class', 'text-warning');
+                              }
                          }
-                    }
-                    result.innerHTML = data.msg;
-               }, 'json');
-               staff.value = "";
-          } else {
-               result.innerHTML = $('#sortsoferrors > p[alertInputStaff]').text();
+                         result.innerHTML = data.msg;
+                    }, 'json');
+                    staff.value = "";
+               } else {
+                    result.innerHTML = $('#sortsoferrors > p[alertInputStaff]').text();
+               }
           }
-
           result_content();
      }
 }
