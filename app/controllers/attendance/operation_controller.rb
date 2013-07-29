@@ -40,7 +40,7 @@ class OperationController < Attendance::ApplicationController
     else
       begin
         type = params[:logType].strip
-        raise( RuntimeError, t("errors.nonWorkunit") ) unless unit = Workunit.find_by_nr( params[:entityID].strip )
+        raise( RuntimeError, t("errors.nonWorkunit") ) unless unit = Workunit.find_by_id( params[:entityID].strip )
         raise( RuntimeError, t("errors.nonStaff") ) unless staff = Staff.find_by_nr( params[:staffID].strip )
         if type == "in"
           Workunit.add_staff( unit, staff )

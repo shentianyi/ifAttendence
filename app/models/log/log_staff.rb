@@ -17,9 +17,9 @@ class LogStaff < ActiveRecord::Base
       log.save
       begin
         if newState
-          #$thrift.addAttendance($thrift_access_key,{"entityId"=>workunit.nr,"attendTime"=>(Time.now.to_ms).to_s,"staffId"=>staff.nr,"type"=>"1"})
+          $thrift.addAttendance($thrift_access_key,{"entityId"=>workunit.nr,"attendTime"=>(Time.now.to_ms).to_s,"staffId"=>staff.nr,"type"=>"1"})
         else
-          #$thrift.addAttendance($thrift_access_key,{"entityId"=>workunit.nr,"attendTime"=>(Time.now.to_ms).to_s,"staffId"=>staff.nr,"type"=>"-1"})
+          $thrift.addAttendance($thrift_access_key,{"entityId"=>workunit.nr,"attendTime"=>(Time.now.to_ms).to_s,"staffId"=>staff.nr,"type"=>"-1"})
         end
       rescue Exception=>e
         system( "cd #{Rails.root}/log && echo Thrift_time: $(date) >> webEpm_error.log && echo '"+e.to_s+"' >> webEpm_error.log" )

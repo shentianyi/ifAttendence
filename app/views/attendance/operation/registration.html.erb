@@ -62,7 +62,7 @@
 						<label class="display-inline text-success" unitstate ><%= unit.state %></label>
 					</div>
 					</h3>
-					<ul unitnr="<%= unit.nr %>" >
+					<ul unitnr="<%= unit.nr %>" unit="<%=unit.id%>">
 						<% unit.staffs.each do |staff| %>
 							<li staffnr="<%= staff.nr %>" ><%= staff.nr %> : <%= staff.name %></li>
 						<% end %>

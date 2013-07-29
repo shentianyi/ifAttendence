@@ -12,7 +12,7 @@ module Attendance
       roleCap = Role.where( :nr=>"captain", :name=>"captain" ).first
       if request.get?
         @sfaff=Staff.new
-        else
+      else
         nr = params[:nr]
         name = params[:name]
         unless cap=Staff.find_by_nr(nr)
@@ -174,8 +174,12 @@ module Attendance
             begin
             #raise(RuntimeError, "生产线号不能为空。") if params[:unit][:nr].blank?
               workunit = Workunit.new( params[:unit] )
-              raise(RuntimeError, t("alert.fail")) unless workunit.save
-              flash.now[:notice] = t("alert.success")
+              if workunit.save
+                workunit.owners << @currentUser unless @currentUser.root?
+                flash.now[:notice] = t("alert.success")
+              else
+                raise(RuntimeError, t("alert.fail"))
+              end
             rescue Exception => e
               flash.now[:notice] = e.to_s
             end
@@ -198,6 +202,15 @@ module Attendance
     end
 
     def staff_workunit
+      if request.post?
+        workunit = Workunit.new( params[:unit] )
+        if workunit.save
+          workunit.owners << @currentUser unless @currentUser.root?
+          flash.now[:notice] = t("alert.success")
+        else
+          flash.now[:notice] =t("alert.fail")
+        end
+      end
       @units = @currentUser.units.select("workunits.*,staff_workunit_maps.id as 'map_id'").all
     end
 
@@ -208,13 +221,13 @@ module Attendance
         if request.post?
           if workunit= Workunit.find_by_id(params[:unit_id])
             # if  workunit.staffs.count>0
-              # flash[:notice]="所选生产线目前有员工登入，请先将所有员工登出。"
+            # flash[:notice]="所选生产线目前有员工登入，请先将所有员工登出。"
             # else
-              map=StaffWorkunitMap.new
-              map.staff=staff
-              map.workunit=workunit
-              map.save
-            # end
+            map=StaffWorkunitMap.new
+          map.staff=staff
+          map.workunit=workunit
+          map.save
+          # end
           end
         end
         @units = staff.units.select("workunits.*,staff_workunit_maps.id as 'map_id',staff_workunit_maps.workunit_id").all
@@ -253,9 +266,9 @@ module Attendance
           if unit = Workunit.find_by_nr( nr )
             if unit.owners.where(:nr=>cap.nr).first
               info<<"第#{line}行已存在！"
-              # if unit.staffs.count>0
-                # info<<"第#{line}行已存在！正在使用中，请登出所有员工再分配。"
-              # end
+            # if unit.staffs.count>0
+            # info<<"第#{line}行已存在！正在使用中，请登出所有员工再分配。"
+            # end
             next
             end
           else
