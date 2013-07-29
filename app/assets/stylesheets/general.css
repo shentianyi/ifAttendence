@@ -93,7 +93,15 @@ label{
 .log-error{
 	margin-left:290px
 }
-
+#staff{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:auto;
+    margin-left:auto;
+}
 
 .attendence-nav {
 	z-index: 50

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c470a190-5550-41e9-a415-e1dd6802cf59" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/attendance/global/create_mem.html.erb" afterPath="$PROJECT_DIR$/app/views/attendance/global/create_mem.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/IF-attendence.html" afterPath="$PROJECT_DIR$/app/assets/IF-attendence.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/general.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/general.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/attendance/global/staff_workunit.html.erb" afterPath="$PROJECT_DIR$/app/views/attendance/global/staff_workunit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ifAttendence.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374473592771" ignored="false" />
+    <file path="/Dummy.txt" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1375090853108" ignored="false" />
     <file path="$PROJECT_DIR$/../JIT/index.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374222787600" ignored="false" />
     <file path="/index.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374222766434" ignored="false" />
     <file path="/globle-addMonitor.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374463983550" ignored="false" />
@@ -33,8 +32,9 @@
     <file path="/brilliantech.railsepm.css" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374227732814" ignored="false" />
     <file path="/dashboard.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374228224418" ignored="false" />
     <file path="$PROJECT_DIR$/../railsEpm/app/assets/javascripts/brilliantech.railsepm.js" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374456305731" ignored="false" />
-    <file path="/general.css" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374474362037" ignored="false" />
+    <file path="/general.css" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1375091073965" ignored="false" />
     <file path="/staff_workunit.html.erb" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1374474437210" ignored="false" />
+    <file path="/IF-attendence.html" changelist="c470a190-5550-41e9-a415-e1dd6802cf59" time="1375090927206" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +54,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="staff_workunit.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/attendance/global/staff_workunit.html.erb">
+      <file leaf-file-name="IF-attendence.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/IF-attendence.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="21" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.62305295">
+            <state line="279" column="30" selection-start="10046" selection-end="10046" vertical-scroll-proportion="0.96805114">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="general.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/general.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="21" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,9 +98,10 @@
         <option value="$PROJECT_DIR$/app/assets/globle-addMonitor.html" />
         <option value="$PROJECT_DIR$/app/views/attendance/global/create_captain.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/ifAttendence.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/general.css" />
         <option value="$PROJECT_DIR$/app/views/attendance/global/create_mem.html.erb" />
         <option value="$PROJECT_DIR$/app/views/attendance/global/staff_workunit.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/general.css" />
+        <option value="$PROJECT_DIR$/app/assets/IF-attendence.html" />
       </list>
     </option>
   </component>
@@ -159,80 +169,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="attendance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="attendance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="operation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ifAttendence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="attendance" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="global" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -323,8 +259,8 @@
     <property name="options.lastSelected" value="vcs.Subversion" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -353,7 +289,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2054534" sideWeight="0.91757244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22067216" sideWeight="0.91757244" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -439,13 +375,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/IF-attendence.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="63" selection-start="6117" selection-end="6122" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/ifattendence.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -455,84 +384,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/ifAttendence.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="59" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.093457945">
-          <folding />
-        </state>
+        <state line="39" column="59" selection-start="1705" selection-end="1705" vertical-scroll-proportion="0.093457945" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/globle-addMonitor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.44728434">
-          <folding />
-        </state>
+        <state line="28" column="14" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.44728434" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_workunit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="48" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="30" column="48" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/global/assign_workunit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_captain.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="73" selection-start="846" selection-end="846" vertical-scroll-proportion="0.35825545">
-          <folding />
-        </state>
+        <state line="23" column="73" selection-start="846" selection-end="846" vertical-scroll-proportion="0.35825545" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/operation/registration.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/operation/login.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/operation/back_login.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/operation/back__registration.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/global/create_mem.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="21" selection-start="973" selection-end="973" vertical-scroll-proportion="0.37383178">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/general.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="17" selection-start="1949" selection-end="1949" vertical-scroll-proportion="0.77588046">
-          <folding />
-        </state>
+        <state line="24" column="21" selection-start="973" selection-end="973" vertical-scroll-proportion="0.37383178" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/global/staff_workunit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="21" selection-start="1733" selection-end="1733" vertical-scroll-proportion="0.62305295">
+        <state line="5" column="47" selection-start="234" selection-end="234" vertical-scroll-proportion="0.07788162" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/general.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="21" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/IF-attendence.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="279" column="30" selection-start="10046" selection-end="10046" vertical-scroll-proportion="0.96805114">
           <folding />
         </state>
       </provider>
