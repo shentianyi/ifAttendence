@@ -1,5 +1,5 @@
-source 'https://rubygems.org'
-
+# source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
@@ -8,12 +8,19 @@ gem 'rails', '3.2.8'
 gem 'mysql2'
 
 gem 'thrift'
+gem 'thrift_client'
 
 gem 'will_paginate'
 
 gem "uuid"
 
 gem "roo"
+
+gem 'redis'
+gem 'resque'
+gem 'redis-namespace'
+
+
 # gem 'spreadsheet'
 # gem 'importex'
 

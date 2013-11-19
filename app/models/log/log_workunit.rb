@@ -12,7 +12,7 @@ class LogWorkunit < ActiveRecord::Base
       log = self.new( :workunitNr=>workunit.nr, :oldState=>oldState, :newState=>newState, :desc=>desc, :time=>Time.now.to_i )
       log.save
       begin
-       $thrift.addOperatingState($thrift_access_key,{"entityId"=>workunit.nr,"operateTime"=>(Time.now.to_ms).to_s,"state"=>newState})
+       $thrift.addOperatingState($thrift_access_key,{"entityId"=>workunit.nr.split(' ')[0],"operateTime"=>(Time.now.to_ms).to_s,"state"=>newState})
       rescue Exception=>e
         system( "cd #{Rails.root}/log && echo Thrift_time: $(date) >> webEpm_error.log && echo '"+e.to_s+"' >> webEpm_error.log" )
         # raise I18n.t("errors.wrService")

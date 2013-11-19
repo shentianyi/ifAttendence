@@ -28,6 +28,20 @@ module CZ
             return
           end
 
+          def addAttendances(accessKey, dataMap)
+            send_addAttendances(accessKey, dataMap)
+            recv_addAttendances()
+          end
+
+          def send_addAttendances(accessKey, dataMap)
+            send_message('addAttendances', AddAttendances_args, :accessKey => accessKey, :dataMap => dataMap)
+          end
+
+          def recv_addAttendances()
+            result = receive_message(AddAttendances_result)
+            return
+          end
+
           def addProductInspect(accessKey, dataMap)
             send_addProductInspect(accessKey, dataMap)
             recv_addProductInspect()
@@ -259,6 +273,13 @@ module CZ
             write_result(result, oprot, 'addAttendance', seqid)
           end
 
+          def process_addAttendances(seqid, iprot, oprot)
+            args = read_args(iprot, AddAttendances_args)
+            result = AddAttendances_result.new()
+            @handler.addAttendances(args.accessKey, args.dataMap)
+            write_result(result, oprot, 'addAttendances', seqid)
+          end
+
           def process_addProductInspect(seqid, iprot, oprot)
             args = read_args(iprot, AddProductInspect_args)
             result = AddProductInspect_result.new()
@@ -387,6 +408,39 @@ module CZ
         end
 
         class AddAttendance_result
+          include ::Thrift::Struct, ::Thrift::Struct_Union
+
+          FIELDS = {
+
+          }
+
+          def struct_fields; FIELDS; end
+
+          def validate
+          end
+
+          ::Thrift::Struct.generate_accessors self
+        end
+
+        class AddAttendances_args
+          include ::Thrift::Struct, ::Thrift::Struct_Union
+          ACCESSKEY = 1
+          DATAMAP = 2
+
+          FIELDS = {
+            ACCESSKEY => {:type => ::Thrift::Types::STRING, :name => 'accessKey'},
+            DATAMAP => {:type => ::Thrift::Types::MAP, :name => 'dataMap', :key => {:type => ::Thrift::Types::STRING}, :value => {:type => ::Thrift::Types::STRING}}
+          }
+
+          def struct_fields; FIELDS; end
+
+          def validate
+          end
+
+          ::Thrift::Struct.generate_accessors self
+        end
+
+        class AddAttendances_result
           include ::Thrift::Struct, ::Thrift::Struct_Union
 
           FIELDS = {

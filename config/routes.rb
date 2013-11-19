@@ -1,4 +1,5 @@
 WebEPM::Application.routes.draw do
+  mount Resque::Server.new, :at=>"/admin/resque"
   scope '(:locale)' do
 
     root :to => 'attendance::operation#login'
